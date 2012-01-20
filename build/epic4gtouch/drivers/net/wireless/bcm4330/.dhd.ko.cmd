@@ -1,0 +1,1 @@
+cmd_drivers/net/wireless/bcm4330/dhd.ko := ccache /drive2/Android/CM9/prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/bin/arm-eabi-ld -EL -r  -T /drive2/Android/CM9/kernel/samsung/epic4gtouch/scripts/module-common.lds --build-id -o drivers/net/wireless/bcm4330/dhd.ko drivers/net/wireless/bcm4330/dhd.o drivers/net/wireless/bcm4330/dhd.mod.o

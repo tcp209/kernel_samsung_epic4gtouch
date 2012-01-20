@@ -1,0 +1,1 @@
+cmd_drivers/bluetooth/bthid/bthid.ko := ccache /drive2/Android/CM9/prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/bin/arm-eabi-ld -EL -r  -T /drive2/Android/CM9/kernel/samsung/epic4gtouch/scripts/module-common.lds --build-id -o drivers/bluetooth/bthid/bthid.ko drivers/bluetooth/bthid/bthid.o drivers/bluetooth/bthid/bthid.mod.o

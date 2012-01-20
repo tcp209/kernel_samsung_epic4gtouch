@@ -1,0 +1,1 @@
+cmd_sound/soc/s3c24xx/snd-soc-c1-mc1n2.o := ccache /drive2/Android/CM9/prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/bin/arm-eabi-ld -EL    -r -o sound/soc/s3c24xx/snd-soc-c1-mc1n2.o sound/soc/s3c24xx/c1_mc1n2.o 

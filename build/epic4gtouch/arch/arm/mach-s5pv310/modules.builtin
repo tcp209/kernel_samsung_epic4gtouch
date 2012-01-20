@@ -1,0 +1,2 @@
+kernel/arch/arm/mach-s5pv310/c1-rfkill.ko
+kernel/arch/arm/mach-s5pv310/dev-audio.ko

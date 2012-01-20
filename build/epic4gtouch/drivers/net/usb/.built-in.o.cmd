@@ -1,0 +1,1 @@
+cmd_drivers/net/usb/built-in.o :=  ccache /drive2/Android/CM9/prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/bin/arm-eabi-ld -EL    -r -o drivers/net/usb/built-in.o drivers/net/usb/usbnet.o drivers/net/usb/cdc-svnet.o drivers/net/usb/sipc4.o drivers/net/usb/pdp.o 

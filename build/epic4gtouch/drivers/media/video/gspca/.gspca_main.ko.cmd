@@ -1,0 +1,1 @@
+cmd_drivers/media/video/gspca/gspca_main.ko := ccache /drive2/Android/CM9/prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/bin/arm-eabi-ld -EL -r  -T /drive2/Android/CM9/kernel/samsung/epic4gtouch/scripts/module-common.lds --build-id -o drivers/media/video/gspca/gspca_main.ko drivers/media/video/gspca/gspca_main.o drivers/media/video/gspca/gspca_main.mod.o

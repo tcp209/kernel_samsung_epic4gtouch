@@ -1,0 +1,4 @@
+kernel/drivers/misc/ak8975.ko
+kernel/drivers/misc/k3dh.ko
+kernel/drivers/misc/max8997-muic.ko
+kernel/drivers/misc/eeprom/at24.ko
