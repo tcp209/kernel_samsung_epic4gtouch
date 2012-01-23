@@ -391,6 +391,7 @@ deps_arch/arm/mach-s5pv310/clock.o := \
     $(wildcard include/config/cpu/s3c2440.h) \
   ../../include/linux/platform_device.h \
   ../../include/linux/mod_devicetable.h \
+  ../../arch/arm/plat-s5p/include/plat/fb.h \
   ../../arch/arm/plat-s5p/include/plat/s5p-clock.h \
   ../../include/linux/clk.h \
   ../../arch/arm/plat-samsung/include/plat/clock-clksrc.h \

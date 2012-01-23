@@ -13,6 +13,7 @@ kernel/drivers/cpufreq/freq_table.ko
 kernel/drivers/dpram/raffaello/dpram.ko
 kernel/drivers/dpram/raffaello/dpram_recovery.ko
 kernel/drivers/hid/hid.ko
+kernel/drivers/hid/hid-apple.ko
 kernel/drivers/hid/usbhid/usbhid.ko
 kernel/drivers/i2c/i2c-core.ko
 kernel/drivers/i2c/i2c-dev.ko

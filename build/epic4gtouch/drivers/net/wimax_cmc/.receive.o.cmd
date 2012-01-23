@@ -719,6 +719,8 @@ deps_drivers/net/wimax_cmc/receive.o := \
     $(wildcard include/config/cpu/s3c2440.h) \
     $(wildcard include/config/video/tsi.h) \
   ../../include/linux/platform_device.h \
+  ../../arch/arm/plat-s5p/include/plat/fb.h \
+    $(wildcard include/config/fb/s3c/mipi/lcd.h) \
   ../../include/linux/mmc/host.h \
     $(wildcard include/config/mmc/debug.h) \
     $(wildcard include/config/leds/triggers.h) \

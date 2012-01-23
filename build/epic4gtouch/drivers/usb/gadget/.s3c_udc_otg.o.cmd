@@ -4,9 +4,7 @@ deps_drivers/usb/gadget/s3c_udc_otg.o := \
   ../../drivers/usb/gadget/s3c_udc_otg.c \
     $(wildcard include/config/usb/gadget/s3c/otgd/dma/mode.h) \
     $(wildcard include/config/usb/gadget/s3c/otgd/slave/mode.h) \
-    $(wildcard include/config/usb/android/samsung/composite.h) \
     $(wildcard include/config/usb/gadget/debug/files.h) \
-    $(wildcard include/config/usb/host/notify.h) \
     $(wildcard include/config/pm.h) \
     $(wildcard include/config/usb/s3c/otg/host.h) \
   ../../drivers/usb/gadget/s3c_udc.h \
@@ -610,7 +608,7 @@ deps_drivers/usb/gadget/s3c_udc_otg.o := \
   ../../include/linux/usb/gadget.h \
     $(wildcard include/config/usb/gadget/dualspeed.h) \
     $(wildcard include/config/usb/otg.h) \
-  ../../include/linux/usb/cdc.h \
+    $(wildcard include/config/usb/android/samsung/composite.h) \
   ../../include/linux/host_notify.h \
   ../../include/linux/regulator/consumer.h \
     $(wildcard include/config/regulator.h) \

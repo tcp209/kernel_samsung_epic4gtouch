@@ -695,8 +695,8 @@ deps_drivers/usb/gadget/u_ether.o := \
     $(wildcard include/config/att/battery.h) \
   ../../include/linux/usb/gadget.h \
     $(wildcard include/config/usb/otg.h) \
-  ../../include/linux/usb/cdc.h \
   ../../include/linux/switch.h \
+  ../../include/linux/usb/cdc.h \
   ../../drivers/usb/gadget/gadget_chips.h \
     $(wildcard include/config/usb/gadget/net2280.h) \
     $(wildcard include/config/usb/gadget/amd5536udc.h) \

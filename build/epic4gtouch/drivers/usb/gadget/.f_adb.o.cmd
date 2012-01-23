@@ -537,7 +537,6 @@ deps_drivers/usb/gadget/f_adb.o := \
   ../../include/trace/events/kmem.h \
   ../../include/linux/kmemleak.h \
     $(wildcard include/config/debug/kmemleak.h) \
-  ../../include/linux/usb/cdc.h \
   ../../include/linux/switch.h \
   ../../include/linux/if_ether.h \
   ../../include/linux/skbuff.h \

@@ -557,8 +557,8 @@ deps_arch/arm/plat-s5p/devs.o := \
   ../../arch/arm/plat-samsung/include/plat/dma.h \
   ../../arch/arm/plat-samsung/include/plat/devs.h \
     $(wildcard include/config/cpu/s3c2440.h) \
-  ../../arch/arm/plat-samsung/include/plat/gpio-cfg.h \
   ../../arch/arm/plat-s5p/include/plat/fb.h \
+  ../../arch/arm/plat-samsung/include/plat/gpio-cfg.h \
   ../../arch/arm/plat-s5p/include/plat/fimc.h \
   ../../include/linux/videodev2.h \
     $(wildcard include/config/video/adv/debug.h) \
@@ -600,7 +600,6 @@ deps_arch/arm/plat-s5p/devs.o := \
   ../../include/trace/events/kmem.h \
   ../../include/linux/kmemleak.h \
     $(wildcard include/config/debug/kmemleak.h) \
-  ../../include/linux/usb/cdc.h \
   ../../include/linux/switch.h \
   ../../include/linux/if_ether.h \
   ../../include/linux/skbuff.h \

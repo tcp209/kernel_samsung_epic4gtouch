@@ -518,7 +518,6 @@ deps_drivers/usb/gadget/android.o := \
   ../../include/trace/events/kmem.h \
   ../../include/linux/kmemleak.h \
     $(wildcard include/config/debug/kmemleak.h) \
-  ../../include/linux/usb/cdc.h \
   ../../include/linux/switch.h \
   ../../include/linux/if_ether.h \
   ../../include/linux/skbuff.h \
@@ -645,13 +644,6 @@ deps_drivers/usb/gadget/android.o := \
     $(wildcard include/config/usb/android/samsung/mtp.h) \
     $(wildcard include/config/usb/gadget/vbus/draw.h) \
   ../../include/linux/kallsyms.h \
-  ../../arch/arm/plat-samsung/include/plat/devs.h \
-    $(wildcard include/config/cpu/s5pv310.h) \
-    $(wildcard include/config/usb/android/samsung/escape.h) \
-    $(wildcard include/config/usb/android/samsung/kies/ums.h) \
-    $(wildcard include/config/usb/android/samsung/rndis/with/ms/composite.h) \
-    $(wildcard include/config/cpu/s3c2440.h) \
-    $(wildcard include/config/video/tsi.h) \
 
 drivers/usb/gadget/android.o: $(deps_drivers/usb/gadget/android.o)
 

@@ -442,10 +442,11 @@ deps_arch/arm/mach-s5pv310/dma.o := \
     $(wildcard include/config/usb/android/rndis.h) \
     $(wildcard include/config/cpu/s3c2440.h) \
     $(wildcard include/config/video/tsi.h) \
+  ../../arch/arm/plat-s5p/include/plat/fb.h \
+    $(wildcard include/config/fb/s3c/mipi/lcd.h) \
   ../../arch/arm/plat-s5p/include/plat/irqs.h \
   ../../arch/arm/plat-samsung/include/plat/pd.h \
   ../../arch/arm/mach-s5pv310/include/mach/map.h \
-    $(wildcard include/config/fb/s3c/mipi/lcd.h) \
     $(wildcard include/config/target/locale/na.h) \
   ../../arch/arm/plat-samsung/include/plat/map-base.h \
   ../../arch/arm/plat-s5p/include/plat/map-s5p.h \

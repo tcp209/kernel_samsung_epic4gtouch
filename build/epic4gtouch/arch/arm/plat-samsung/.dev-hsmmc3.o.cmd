@@ -505,6 +505,7 @@ deps_arch/arm/plat-samsung/dev-hsmmc3.o := \
     $(wildcard include/config/usb/android/rndis.h) \
     $(wildcard include/config/cpu/s3c2440.h) \
     $(wildcard include/config/video/tsi.h) \
+  ../../arch/arm/plat-s5p/include/plat/fb.h \
 
 arch/arm/plat-samsung/dev-hsmmc3.o: $(deps_arch/arm/plat-samsung/dev-hsmmc3.o)
 

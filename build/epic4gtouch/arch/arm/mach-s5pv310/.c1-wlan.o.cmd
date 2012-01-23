@@ -522,6 +522,8 @@ deps_arch/arm/mach-s5pv310/c1-wlan.o := \
     $(wildcard include/config/video/tsi.h) \
   ../../include/linux/platform_device.h \
   ../../include/linux/mod_devicetable.h \
+  ../../arch/arm/plat-s5p/include/plat/fb.h \
+    $(wildcard include/config/fb/s3c/mipi/lcd.h) \
   ../../arch/arm/plat-samsung/include/plat/sdhci.h \
     $(wildcard include/config/s3c64xx/setup/sdhci.h) \
     $(wildcard include/config/s3c/dev/hsmmc.h) \
@@ -538,7 +540,6 @@ deps_arch/arm/mach-s5pv310/c1-wlan.o := \
   ../../arch/arm/mach-s5pv310/include/mach/regs-gpio.h \
   ../../arch/arm/mach-s5pv310/include/mach/map.h \
     $(wildcard include/config/cpu/s5pv310/evt1.h) \
-    $(wildcard include/config/fb/s3c/mipi/lcd.h) \
     $(wildcard include/config/target/locale/na.h) \
   ../../arch/arm/plat-samsung/include/plat/map-base.h \
   ../../arch/arm/plat-s5p/include/plat/map-s5p.h \

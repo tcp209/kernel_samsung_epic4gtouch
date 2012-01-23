@@ -539,6 +539,8 @@ deps_arch/arm/plat-samsung/init.o := \
     $(wildcard include/config/usb/android/rndis.h) \
     $(wildcard include/config/cpu/s3c2440.h) \
     $(wildcard include/config/video/tsi.h) \
+  ../../arch/arm/plat-s5p/include/plat/fb.h \
+    $(wildcard include/config/fb/s3c/mipi/lcd.h) \
   ../../arch/arm/plat-samsung/include/plat/clock.h \
   ../../arch/arm/plat-samsung/include/plat/regs-serial.h \
 

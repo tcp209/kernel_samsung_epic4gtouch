@@ -565,6 +565,8 @@ deps_arch/arm/mach-s5pv310/c1-gpio.o := \
     $(wildcard include/config/dmabounce.h) \
   ../../include/linux/pm_wakeup.h \
   ../../include/linux/mod_devicetable.h \
+  ../../arch/arm/plat-s5p/include/plat/fb.h \
+    $(wildcard include/config/fb/s3c/mipi/lcd.h) \
   ../../arch/arm/plat-samsung/include/plat/gpio-cfg.h \
     $(wildcard include/config/arch/s5pv310.h) \
   ../../arch/arm/plat-samsung/include/plat/regs-serial.h \

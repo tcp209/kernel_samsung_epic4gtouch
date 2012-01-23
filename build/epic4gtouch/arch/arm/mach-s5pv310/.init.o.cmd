@@ -534,6 +534,8 @@ deps_arch/arm/mach-s5pv310/init.o := \
     $(wildcard include/config/dmabounce.h) \
   ../../include/linux/pm_wakeup.h \
   ../../include/linux/mod_devicetable.h \
+  ../../arch/arm/plat-s5p/include/plat/fb.h \
+    $(wildcard include/config/fb/s3c/mipi/lcd.h) \
   ../../arch/arm/plat-samsung/include/plat/regs-serial.h \
     $(wildcard include/config/serial/samsung/uarts.h) \
 

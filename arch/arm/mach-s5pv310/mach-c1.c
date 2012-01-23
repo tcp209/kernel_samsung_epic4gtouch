@@ -3011,12 +3011,12 @@ static int max8997_muic_charger_cb(cable_type_t cable_type)
 	struct power_supply *psy = power_supply_get_by_name("battery");
 	union power_supply_propval value;
 
-	if (!psy) {
+	if(!psy) {
 		pr_err("%s: fail to get battery ps\n", __func__);
 		return -ENODEV;
 	}
 
-	switch (cable_type) {
+	switch(cable_type) {
 	case CABLE_TYPE_NONE:
 	case CABLE_TYPE_OTG:
 	case CABLE_TYPE_JIG_UART_OFF:
@@ -3069,7 +3069,6 @@ static void max8997_muic_usb_cb(u8 usb_mode)
 		ret = udc->change_usb_mode(USB_CABLE_DETACHED);
 		if (ret < 0)
 			pr_warn("%s: fail to change mode!!!\n", __func__);
-
 		regulator = regulator_get(NULL, "safeout1");
 		if (IS_ERR(regulator)) {
 			pr_err("%s: fail to get regulator\n", __func__);
@@ -3100,7 +3099,6 @@ static void max8997_muic_usb_cb(u8 usb_mode)
 		ret = udc->change_usb_mode(usb_mode);
 		if (ret < 0)
 			pr_err("%s: fail to change mode!!!\n", __func__);
-
 		if (usb_mode == USB_OTGHOST_DETACHED)
 			otg_data->set_pwr_cb(0);
 	}
@@ -3535,7 +3533,7 @@ static u8 t8_config[] = {GEN_ACQUISITIONCONFIG_T8,
 static u8 t9_config[] = {TOUCH_MULTITOUCHSCREEN_T9,
 				131, 0, 0, 19, 11, 0, 32, MXT224_THRESHOLD, 2, 1,
 				0,
-				15,		/* MOVHYSTI */
+				5,		/* MOVHYSTI */
 				1, 11, MXT224_MAX_MT_FINGERS, 5, 40, 10, 31, 3,
 				223, 1, 0, 0, 0, 0, 143, 55, 143, 90, 18};
 
@@ -3689,7 +3687,7 @@ static u8 t9_config_e[] = {TOUCH_MULTITOUCHSCREEN_T9,
 				10,		/* MOVHYSTI */
 				1, 46, MXT224_MAX_MT_FINGERS, 5, 40, 10, 31, 3,
 				223, 1, 10, 10, 10, 10, 143, 40, 143, 80,
-				18, 15, 50, 50, 0};
+				18, 15, 50, 50, 2};
 
 #else
 static u8 t9_config_e[] = {TOUCH_MULTITOUCHSCREEN_T9,
@@ -3719,8 +3717,8 @@ static u8 t23_config_e[] = {TOUCH_PROXIMITY_T23,
 static u8 t25_config_e[] = {SPT_SELFTEST_T25,
 				0, 0, 0, 0, 0, 0, 0, 0};
 
-static u8 t38_config_e[] = {SPT_USERDATA_T38,
-				0,1,14,23,44,0,0,0};
+//static u8 t38_config_e[] = {SPT_USERDATA_T38,
+//				0,1,14,23,44,0,0,0};
 static u8 t40_config_e[] = {PROCI_GRIPSUPPRESSION_T40,
 				0, 0, 0, 0, 0};
 
@@ -3729,7 +3727,7 @@ static u8 t42_config_e[] = {PROCI_TOUCHSUPPRESSION_T42,
 
 #ifdef CONFIG_TARGET_LOCALE_NA
 static u8 t46_config_e[] = {SPT_CTECONFIG_T46,
-				0, 3, 16, 40, 0, 0, 1, 0, 0};
+				0, 3, 16, 45, 0, 0, 1, 0, 0};
 #else
 static u8 t46_config_e[] = {SPT_CTECONFIG_T46,
 				0, 3, 16, 48, 0, 0, 1, 0, 0};
@@ -3740,23 +3738,23 @@ static u8 t47_config_e[] = {PROCI_STYLUS_T47,
 #if 1 /*MXT224E_0V5_CONFIG */
 #ifdef CONFIG_TARGET_LOCALE_NA
 static u8 t48_config_e_ta[] = {PROCG_NOISESUPPRESSION_T48,
-				3, 132, 0x52, 0, 0, 0, 0, 0, 10, 15,
-				0, 0, 0, 6, 6, 0, 0, 64, 4, 64,
-				10, 0, 9, 5, 0, 15, 0, 20, 0, 0,
+				1, 4, 0x50, 0, 0, 0, 0, 0, 0, 0,
+				0, 0, 0, 6, 6, 0, 0, 100, 4, 64,
+				10, 0, 20, 5, 0, 38, 0, 20, 0, 0,
 				0, 0, 0, 0, 0, 40, 2,/*blen=0,threshold=50*/
 				10,		/* MOVHYSTI */
-				1, 47,
+				1, 15,
 				10, 5, 40, 240, 245, 10, 10, 148, 50, 143,
 				80, 18, 10, 0};
 static u8 t48_config_e[] = {PROCG_NOISESUPPRESSION_T48,
-				3, 132, 0x40, 0, 0, 0, 0, 0, 10, 15,
-				0, 0, 0, 6, 6, 0, 0, 64, 4, 64,
+				1, 4, 0x40, 0, 0, 0, 0, 0, 0, 0,
+				0, 0, 0, 6, 6, 0, 0, 100, 4, 64,
 				10, 0, 20, 5, 0, 38, 0, 5, 0, 0,  /*byte 27 original value 20*/
 				0, 0, 0, 0, 32, 50, 2,
 				10,
 				1, 46,
 				MXT224_MAX_MT_FINGERS, 5, 40, 10, 0, 10, 10, 143, 40, 143,
-				80, 18, 15, 0};
+				80, 18, 15, 2};
 #else
 static u8 t48_config_e_ta[] = {PROCG_NOISESUPPRESSION_T48,
 				1, 4, 0x50, 0, 0, 0, 0, 0, 0, 0,
@@ -3795,7 +3793,7 @@ static const u8 *mxt224e_config[] = {
 	t18_config_e,
 	t23_config_e,
 	t25_config_e,
-	t38_config_e,
+//	t38_config_e,
 	t40_config_e,
 	t42_config_e,
 	t46_config_e,
@@ -6667,19 +6665,19 @@ static struct sec_jack_buttons_zone sec_jack_buttons_zones[] = {
 		/* send/end */
 		.code		= KEY_MEDIA,
 		.adc_low	= 0,
-		.adc_high	= 170,
+		.adc_high	= 140,
 	},
 	{
 		/* vol+*/
 		.code		= KEY_PREVIOUSSONG,
-		.adc_low	= 171,
+		.adc_low	= 142,
 		.adc_high	= 370,
 	},
 	{
 		/* vol- */
 		.code		= KEY_NEXTSONG,
-		.adc_low	= 371,
-		.adc_high	= 850,
+		.adc_low	= 380,
+		.adc_high	= 820,
 	},
 };
 #else
@@ -7196,14 +7194,15 @@ static struct platform_device *smdkc210_devices[] __initdata = {
 #ifdef CONFIG_USB_GADGET
 	&s3c_device_usbgadget,
 #endif
-#ifdef CONFIG_USB_ANDROID_RNDIS
-	&s3c_device_rndis,
-#endif
 #ifdef CONFIG_USB_ANDROID
 	&s3c_device_android_usb,
 #ifdef CONFIG_USB_ANDROID_MASS_STORAGE
 	&s3c_device_usb_mass_storage,
 #endif
+#ifdef CONFIG_USB_ANDROID_RNDIS
+	&s3c_device_rndis,
+#endif
+
 #endif
 #ifdef CONFIG_USB_S3C_OTG_HOST
 	&s3c_device_usb_otghcd,
@@ -7953,12 +7952,14 @@ static void __init smdkc210_machine_init(void)
 	uart_switch_init();
 	c1_sound_init();
 
-#ifdef CONFIG_USB_ANDROID_SAMSUNG_COMPOSITE
+//#ifdef CONFIG_USB_ANDROID_SAMSUNG_COMPOSITE
 /* soonyong.cho : This is for setting unique serial number */
-	s3c_usb_set_serial();
+	//s3c_usb_set_serial();
 /* Changes value of nluns in order to use external storage */
-	usb_device_init();
-#endif
+	//usb_device_init();
+//#else
+ //   s3c_usb_otg_composite_pdata(&fb_platform_data);
+//#endif
 
 /* klaatu: semaphore logging code - for debug  */
 	debug_semaphore_init();

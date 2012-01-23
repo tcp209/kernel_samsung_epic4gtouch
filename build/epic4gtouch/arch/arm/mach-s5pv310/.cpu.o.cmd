@@ -519,6 +519,8 @@ deps_arch/arm/mach-s5pv310/cpu.o := \
     $(wildcard include/config/dmabounce.h) \
   ../../include/linux/pm_wakeup.h \
   ../../include/linux/mod_devicetable.h \
+  ../../arch/arm/plat-s5p/include/plat/fb.h \
+    $(wildcard include/config/fb/s3c/mipi/lcd.h) \
   ../../arch/arm/plat-samsung/include/plat/clock.h \
   ../../arch/arm/plat-samsung/include/plat/adc-core.h \
     $(wildcard include/config/samsung/dev/adc.h) \
@@ -546,7 +548,6 @@ deps_arch/arm/mach-s5pv310/cpu.o := \
     $(wildcard include/config/s3c/dev/i2c7.h) \
   ../../arch/arm/mach-s5pv310/include/mach/regs-irq.h \
   ../../arch/arm/mach-s5pv310/include/mach/map.h \
-    $(wildcard include/config/fb/s3c/mipi/lcd.h) \
     $(wildcard include/config/target/locale/na.h) \
   ../../arch/arm/plat-samsung/include/plat/map-base.h \
   ../../arch/arm/plat-s5p/include/plat/map-s5p.h \

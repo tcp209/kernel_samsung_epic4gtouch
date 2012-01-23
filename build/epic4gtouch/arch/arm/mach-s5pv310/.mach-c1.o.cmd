@@ -3923,7 +3923,6 @@ deps_arch/arm/mach-s5pv310/mach-c1.o := \
   ../../include/linux/usb/gadget.h \
     $(wildcard include/config/usb/gadget/dualspeed.h) \
     $(wildcard include/config/usb/otg.h) \
-  ../../include/linux/usb/cdc.h \
   ../../arch/arm/include/../../../drivers/video/samsung/s3cfb.h \
     $(wildcard include/config/vcm.h) \
     $(wildcard include/config/support/ump.h) \
@@ -3959,7 +3958,6 @@ deps_arch/arm/mach-s5pv310/mach-c1.o := \
     $(wildcard include/config/async/tx/disable/channel/switch.h) \
     $(wildcard include/config/dma/engine.h) \
     $(wildcard include/config/async/tx/dma.h) \
-  ../../include/linux/usb3803.h \
   ../../arch/arm/mach-s5pv310/c1.h \
 
 arch/arm/mach-s5pv310/mach-c1.o: $(deps_arch/arm/mach-s5pv310/mach-c1.o)

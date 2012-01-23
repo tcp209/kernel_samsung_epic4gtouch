@@ -742,6 +742,8 @@ deps_drivers/net/wimax_cmc/hardware.o := \
     $(wildcard include/config/cpu/s3c2440.h) \
     $(wildcard include/config/video/tsi.h) \
   ../../include/linux/platform_device.h \
+  ../../arch/arm/plat-s5p/include/plat/fb.h \
+    $(wildcard include/config/fb/s3c/mipi/lcd.h) \
 
 drivers/net/wimax_cmc/hardware.o: $(deps_drivers/net/wimax_cmc/hardware.o)
 

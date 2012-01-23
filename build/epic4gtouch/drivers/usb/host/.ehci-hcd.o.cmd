@@ -645,6 +645,8 @@ deps_drivers/usb/host/ehci-hcd.o := \
     $(wildcard include/config/cpu/s3c2440.h) \
     $(wildcard include/config/video/tsi.h) \
   ../../include/linux/platform_device.h \
+  ../../arch/arm/plat-s5p/include/plat/fb.h \
+    $(wildcard include/config/fb/s3c/mipi/lcd.h) \
   ../../drivers/usb/host/ehci.h \
     $(wildcard include/config/usb/ehci/big/endian/desc.h) \
     $(wildcard include/config/usb/ehci/root/hub/tt.h) \

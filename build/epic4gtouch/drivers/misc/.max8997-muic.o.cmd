@@ -627,7 +627,6 @@ deps_drivers/misc/max8997-muic.o := \
   ../../include/linux/mfd/max8997-private.h \
   ../../include/linux/host_notify.h \
   ../../arch/arm/plat-samsung/include/plat/udc-hs.h \
-  ../../include/linux/usb3803.h \
 
 drivers/misc/max8997-muic.o: $(deps_drivers/misc/max8997-muic.o)
 
