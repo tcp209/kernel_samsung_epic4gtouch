@@ -718,6 +718,8 @@ deps_net/ipv4/udp.o := \
   ../../arch/arm/plat-s5p/include/plat/irqs.h \
   ../../include/linux/irq_cpustat.h \
   ../../include/net/tcp_states.h \
+  ../../include/linux/uid_stat.h \
+    $(wildcard include/config/uid/stat.h) \
   ../../include/net/icmp.h \
   ../../include/linux/icmp.h \
   ../../include/net/inet_sock.h \

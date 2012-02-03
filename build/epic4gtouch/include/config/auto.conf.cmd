@@ -384,20 +384,25 @@ deps_config := \
 	drivers/net/usb/Kconfig \
 	drivers/net/wimax/i2400m/Kconfig \
 	drivers/net/wimax/Kconfig \
+	drivers/net/wireless/mwifiex/Kconfig \
 	drivers/net/wireless/zd1211rw/Kconfig \
 	drivers/net/wireless/wl12xx/Kconfig \
+	drivers/net/wireless/wl1251/Kconfig \
+	drivers/net/wireless/rtlwifi/Kconfig \
 	drivers/net/wireless/rt2x00/Kconfig \
 	drivers/net/wireless/p54/Kconfig \
 	drivers/net/wireless/orinoco/Kconfig \
 	drivers/net/wireless/libertas/Kconfig \
 	drivers/net/wireless/iwmc3200wifi/Kconfig \
+	drivers/net/wireless/iwlegacy/Kconfig \
 	drivers/net/wireless/iwlwifi/Kconfig \
 	drivers/net/wireless/ipw2x00/Kconfig \
 	drivers/net/wireless/hostap/Kconfig \
-	drivers/net/wireless/bcm4330/Kconfig \
+	drivers/net/wireless/bcmdhd/Kconfig \
+	drivers/net/wireless/bcm4329/Kconfig \
 	drivers/net/wireless/b43legacy/Kconfig \
 	drivers/net/wireless/b43/Kconfig \
-	drivers/net/wireless/ath/ar9170/Kconfig \
+	drivers/net/wireless/ath/carl9170/Kconfig \
 	drivers/net/wireless/ath/ath9k/Kconfig \
 	drivers/net/wireless/ath/ath5k/Kconfig \
 	drivers/net/wireless/ath/Kconfig \

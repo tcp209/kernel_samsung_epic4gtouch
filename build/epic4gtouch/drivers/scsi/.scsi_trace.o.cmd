@@ -596,6 +596,7 @@ deps_drivers/scsi/scsi_trace.o := \
   ../../include/linux/bsg.h \
   ../../include/linux/elevator.h \
   ../../include/scsi/scsi_host.h \
+    $(wildcard include/config/usb/host/notify.h) \
   ../../include/scsi/scsi.h \
 
 drivers/scsi/scsi_trace.o: $(deps_drivers/scsi/scsi_trace.o)

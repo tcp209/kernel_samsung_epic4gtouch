@@ -2,6 +2,7 @@ cmd_drivers/char/s3c_mem.o := ccache /drive2/Android/CM9/prebuilt/linux-x86/tool
 
 deps_drivers/char/s3c_mem.o := \
   ../../drivers/char/s3c_mem.c \
+    $(wildcard include/config/s3c/dma/mem.h) \
   ../../include/linux/init.h \
     $(wildcard include/config/modules.h) \
     $(wildcard include/config/hotplug.h) \

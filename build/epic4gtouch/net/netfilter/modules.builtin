@@ -24,7 +24,6 @@ kernel/net/netfilter/xt_connmark.ko
 kernel/net/netfilter/xt_CLASSIFY.ko
 kernel/net/netfilter/xt_HL.ko
 kernel/net/netfilter/xt_NFQUEUE.ko
-kernel/net/netfilter/xt_TPROXY.ko
 kernel/net/netfilter/xt_comment.ko
 kernel/net/netfilter/xt_connbytes.ko
 kernel/net/netfilter/xt_connlimit.ko
@@ -40,6 +39,7 @@ kernel/net/netfilter/xt_multiport.ko
 kernel/net/netfilter/xt_pkttype.ko
 kernel/net/netfilter/xt_policy.ko
 kernel/net/netfilter/xt_quota.ko
+kernel/net/netfilter/xt_quota2.ko
 kernel/net/netfilter/xt_socket.ko
 kernel/net/netfilter/xt_state.ko
 kernel/net/netfilter/xt_statistic.ko

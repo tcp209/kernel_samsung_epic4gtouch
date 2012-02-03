@@ -4,7 +4,9 @@ deps_drivers/usb/gadget/s3c_udc_otg.o := \
   ../../drivers/usb/gadget/s3c_udc_otg.c \
     $(wildcard include/config/usb/gadget/s3c/otgd/dma/mode.h) \
     $(wildcard include/config/usb/gadget/s3c/otgd/slave/mode.h) \
+    $(wildcard include/config/usb/android/samsung/composite.h) \
     $(wildcard include/config/usb/gadget/debug/files.h) \
+    $(wildcard include/config/usb/host/notify.h) \
     $(wildcard include/config/pm.h) \
     $(wildcard include/config/usb/s3c/otg/host.h) \
   ../../drivers/usb/gadget/s3c_udc.h \
@@ -608,7 +610,6 @@ deps_drivers/usb/gadget/s3c_udc_otg.o := \
   ../../include/linux/usb/gadget.h \
     $(wildcard include/config/usb/gadget/dualspeed.h) \
     $(wildcard include/config/usb/otg.h) \
-    $(wildcard include/config/usb/android/samsung/composite.h) \
   ../../include/linux/host_notify.h \
   ../../include/linux/regulator/consumer.h \
     $(wildcard include/config/regulator.h) \
@@ -624,7 +625,6 @@ deps_drivers/usb/gadget/s3c_udc_otg.o := \
   ../../arch/arm/plat-s5p/include/plat/map-s5p.h \
     $(wildcard include/config/s5pv310/fpga.h) \
   ../../arch/arm/plat-samsung/include/plat/regs-otg.h \
-  ../../arch/arm/plat-samsung/include/plat/udc-hs.h \
   ../../drivers/usb/gadget/s3c_udc_otg_xfer_dma.c \
     $(wildcard include/config/battery/s3c.h) \
 

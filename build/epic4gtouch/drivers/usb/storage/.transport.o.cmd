@@ -623,6 +623,7 @@ deps_drivers/usb/storage/transport.o := \
   ../../include/linux/usb_usual.h \
     $(wildcard include/config/usb/libusual.h) \
   ../../include/scsi/scsi_host.h \
+    $(wildcard include/config/usb/host/notify.h) \
   ../../drivers/usb/storage/transport.h \
   ../../drivers/usb/storage/protocol.h \
   ../../drivers/usb/storage/scsiglue.h \

@@ -599,6 +599,7 @@ deps_drivers/scsi/scsi_sysfs.o := \
   ../../include/scsi/scsi.h \
   ../../include/scsi/scsi_device.h \
   ../../include/scsi/scsi_host.h \
+    $(wildcard include/config/usb/host/notify.h) \
   ../../include/scsi/scsi_tcq.h \
   ../../include/scsi/scsi_cmnd.h \
   ../../include/linux/dma-mapping.h \

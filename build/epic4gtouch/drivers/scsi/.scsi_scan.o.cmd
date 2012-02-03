@@ -620,6 +620,7 @@ deps_drivers/scsi/scsi_scan.o := \
   ../../include/scsi/scsi_driver.h \
   ../../include/scsi/scsi_devinfo.h \
   ../../include/scsi/scsi_host.h \
+    $(wildcard include/config/usb/host/notify.h) \
   ../../include/scsi/scsi_transport.h \
   ../../include/linux/transport_class.h \
   ../../include/linux/attribute_container.h \

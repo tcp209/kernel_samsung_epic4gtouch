@@ -11,6 +11,8 @@ deps_drivers/media/video/samsung/fimc/fimc_dev.o := \
     $(wildcard include/config/s5pv310/dev/pd.h) \
     $(wildcard include/config/pm/runtime.h) \
     $(wildcard include/config/video/fimc/ump/vcm/cma.h) \
+    $(wildcard include/config/mach/p6/rev02.h) \
+    $(wildcard include/config/mach/p6/rev00.h) \
     $(wildcard include/config/cpu/s5pv310.h) \
     $(wildcard include/config/video/fimc/range/wide.h) \
     $(wildcard include/config/pm.h) \

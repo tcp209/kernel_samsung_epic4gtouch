@@ -36,35 +36,35 @@ deps_net/ipv4/netfilter/ipt_ecn.o := \
   ../../include/linux/swab.h \
   ../../arch/arm/include/asm/swab.h \
   ../../include/linux/byteorder/generic.h \
-  ../../include/linux/module.h \
-    $(wildcard include/config/symbol/prefix.h) \
-    $(wildcard include/config/modules.h) \
-    $(wildcard include/config/modversions.h) \
-    $(wildcard include/config/unused/symbols.h) \
-    $(wildcard include/config/generic/bug.h) \
-    $(wildcard include/config/kallsyms.h) \
-    $(wildcard include/config/smp.h) \
-    $(wildcard include/config/tracepoints.h) \
+  ../../include/linux/ip.h \
+  ../../include/linux/skbuff.h \
+    $(wildcard include/config/nf/conntrack.h) \
+    $(wildcard include/config/bridge/netfilter.h) \
+    $(wildcard include/config/xfrm.h) \
+    $(wildcard include/config/net/sched.h) \
+    $(wildcard include/config/net/cls/act.h) \
+    $(wildcard include/config/ipv6/ndisc/nodetype.h) \
+    $(wildcard include/config/net/dma.h) \
+    $(wildcard include/config/network/secmark.h) \
+  ../../include/linux/kernel.h \
+    $(wildcard include/config/preempt/voluntary.h) \
+    $(wildcard include/config/debug/spinlock/sleep.h) \
+    $(wildcard include/config/prove/locking.h) \
+    $(wildcard include/config/printk.h) \
+    $(wildcard include/config/dynamic/debug.h) \
+    $(wildcard include/config/ring/buffer.h) \
     $(wildcard include/config/tracing.h) \
-    $(wildcard include/config/event/tracing.h) \
+    $(wildcard include/config/numa.h) \
     $(wildcard include/config/ftrace/mcount/record.h) \
-    $(wildcard include/config/module/unload.h) \
-    $(wildcard include/config/constructors.h) \
-    $(wildcard include/config/sysfs.h) \
-  ../../include/linux/list.h \
-    $(wildcard include/config/debug/list.h) \
-  ../../include/linux/poison.h \
-    $(wildcard include/config/illegal/pointer/value.h) \
-  ../../include/linux/prefetch.h \
-  ../../arch/arm/include/asm/processor.h \
-    $(wildcard include/config/mmu.h) \
-  ../../arch/arm/include/asm/ptrace.h \
-    $(wildcard include/config/cpu/endian/be8.h) \
-    $(wildcard include/config/arm/thumb.h) \
-  ../../arch/arm/include/asm/hwcap.h \
-  ../../arch/arm/include/asm/cache.h \
-    $(wildcard include/config/arm/l1/cache/shift.h) \
-    $(wildcard include/config/aeabi.h) \
+  /drive2/Android/CM9/prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/bin/../lib/gcc/arm-eabi/4.4.3/include/stdarg.h \
+  ../../include/linux/linkage.h \
+  ../../arch/arm/include/asm/linkage.h \
+  ../../include/linux/bitops.h \
+    $(wildcard include/config/generic/find/first/bit.h) \
+    $(wildcard include/config/generic/find/last/bit.h) \
+    $(wildcard include/config/generic/find/next/bit.h) \
+  ../../arch/arm/include/asm/bitops.h \
+    $(wildcard include/config/smp.h) \
   ../../arch/arm/include/asm/system.h \
     $(wildcard include/config/cpu/xsc3.h) \
     $(wildcard include/config/cpu/fa526.h) \
@@ -73,8 +73,6 @@ deps_net/ipv4/netfilter/ipt_ecn.o := \
     $(wildcard include/config/cpu/sa1100.h) \
     $(wildcard include/config/cpu/sa110.h) \
     $(wildcard include/config/cpu/32v6k.h) \
-  ../../include/linux/linkage.h \
-  ../../arch/arm/include/asm/linkage.h \
   ../../include/linux/irqflags.h \
     $(wildcard include/config/trace/irqflags.h) \
     $(wildcard include/config/irqsoff/tracer.h) \
@@ -82,30 +80,14 @@ deps_net/ipv4/netfilter/ipt_ecn.o := \
     $(wildcard include/config/trace/irqflags/support.h) \
   ../../include/linux/typecheck.h \
   ../../arch/arm/include/asm/irqflags.h \
+  ../../arch/arm/include/asm/ptrace.h \
+    $(wildcard include/config/cpu/endian/be8.h) \
+    $(wildcard include/config/arm/thumb.h) \
+  ../../arch/arm/include/asm/hwcap.h \
   ../../arch/arm/include/asm/outercache.h \
     $(wildcard include/config/outer/cache/sync.h) \
     $(wildcard include/config/outer/cache.h) \
   ../../include/asm-generic/cmpxchg-local.h \
-  ../../include/linux/stat.h \
-  ../../arch/arm/include/asm/stat.h \
-  ../../include/linux/time.h \
-    $(wildcard include/config/arch/uses/gettimeoffset.h) \
-  ../../include/linux/cache.h \
-    $(wildcard include/config/arch/has/cache/line/size.h) \
-  ../../include/linux/kernel.h \
-    $(wildcard include/config/preempt/voluntary.h) \
-    $(wildcard include/config/debug/spinlock/sleep.h) \
-    $(wildcard include/config/prove/locking.h) \
-    $(wildcard include/config/printk.h) \
-    $(wildcard include/config/dynamic/debug.h) \
-    $(wildcard include/config/ring/buffer.h) \
-    $(wildcard include/config/numa.h) \
-  /drive2/Android/CM9/prebuilt/linux-x86/toolchain/arm-eabi-4.4.3/bin/../lib/gcc/arm-eabi/4.4.3/include/stdarg.h \
-  ../../include/linux/bitops.h \
-    $(wildcard include/config/generic/find/first/bit.h) \
-    $(wildcard include/config/generic/find/last/bit.h) \
-    $(wildcard include/config/generic/find/next/bit.h) \
-  ../../arch/arm/include/asm/bitops.h \
   ../../include/asm-generic/bitops/non-atomic.h \
   ../../include/asm-generic/bitops/fls64.h \
   ../../include/asm-generic/bitops/sched.h \
@@ -121,9 +103,32 @@ deps_net/ipv4/netfilter/ipt_ecn.o := \
     $(wildcard include/config/bug.h) \
     $(wildcard include/config/debug/bugverbose.h) \
   ../../include/asm-generic/bug.h \
+    $(wildcard include/config/generic/bug.h) \
     $(wildcard include/config/generic/bug/relative/pointers.h) \
   ../../arch/arm/include/asm/div64.h \
-  ../../include/linux/seqlock.h \
+  ../../include/linux/kmemcheck.h \
+    $(wildcard include/config/kmemcheck.h) \
+  ../../include/linux/mm_types.h \
+    $(wildcard include/config/split/ptlock/cpus.h) \
+    $(wildcard include/config/want/page/debug/flags.h) \
+    $(wildcard include/config/mmu.h) \
+    $(wildcard include/config/aio.h) \
+    $(wildcard include/config/mm/owner.h) \
+    $(wildcard include/config/mmu/notifier.h) \
+  ../../include/linux/auxvec.h \
+  ../../arch/arm/include/asm/auxvec.h \
+  ../../include/linux/threads.h \
+    $(wildcard include/config/nr/cpus.h) \
+    $(wildcard include/config/base/small.h) \
+  ../../include/linux/list.h \
+    $(wildcard include/config/debug/list.h) \
+  ../../include/linux/poison.h \
+    $(wildcard include/config/illegal/pointer/value.h) \
+  ../../include/linux/prefetch.h \
+  ../../arch/arm/include/asm/processor.h \
+  ../../arch/arm/include/asm/cache.h \
+    $(wildcard include/config/arm/l1/cache/shift.h) \
+    $(wildcard include/config/aeabi.h) \
   ../../include/linux/spinlock.h \
     $(wildcard include/config/debug/spinlock.h) \
     $(wildcard include/config/generic/lockbreak.h) \
@@ -185,52 +190,26 @@ deps_net/ipv4/netfilter/ipt_ecn.o := \
   ../../arch/arm/include/asm/atomic.h \
     $(wildcard include/config/generic/atomic64.h) \
   ../../include/asm-generic/atomic-long.h \
-  ../../include/linux/math64.h \
-  ../../include/linux/kmod.h \
-  ../../include/linux/gfp.h \
-    $(wildcard include/config/kmemcheck.h) \
-    $(wildcard include/config/highmem.h) \
-    $(wildcard include/config/zone/dma.h) \
-    $(wildcard include/config/zone/dma32.h) \
-    $(wildcard include/config/debug/vm.h) \
-  ../../include/linux/mmzone.h \
-    $(wildcard include/config/force/max/zoneorder.h) \
-    $(wildcard include/config/memory/hotplug.h) \
-    $(wildcard include/config/sparsemem.h) \
-    $(wildcard include/config/compaction.h) \
-    $(wildcard include/config/arch/populates/node/map.h) \
-    $(wildcard include/config/discontigmem.h) \
-    $(wildcard include/config/flat/node/mem/map.h) \
-    $(wildcard include/config/cgroup/mem/res/ctlr.h) \
-    $(wildcard include/config/no/bootmem.h) \
-    $(wildcard include/config/have/memory/present.h) \
-    $(wildcard include/config/have/memoryless/nodes.h) \
-    $(wildcard include/config/need/node/memmap/size.h) \
-    $(wildcard include/config/need/multiple/nodes.h) \
-    $(wildcard include/config/have/arch/early/pfn/to/nid.h) \
-    $(wildcard include/config/flatmem.h) \
-    $(wildcard include/config/sparsemem/extreme.h) \
-    $(wildcard include/config/nodes/span/other/nodes.h) \
-    $(wildcard include/config/holes/in/zone.h) \
-    $(wildcard include/config/arch/has/holes/memorymodel.h) \
+  ../../include/linux/prio_tree.h \
+  ../../include/linux/rbtree.h \
+  ../../include/linux/rwsem.h \
+    $(wildcard include/config/rwsem/generic/spinlock.h) \
+  ../../include/linux/rwsem-spinlock.h \
+  ../../include/linux/completion.h \
   ../../include/linux/wait.h \
   ../../arch/arm/include/asm/current.h \
-  ../../include/linux/threads.h \
-    $(wildcard include/config/nr/cpus.h) \
-    $(wildcard include/config/base/small.h) \
-  ../../include/linux/numa.h \
-    $(wildcard include/config/nodes/shift.h) \
-  ../../include/linux/init.h \
-    $(wildcard include/config/hotplug.h) \
-  ../../include/linux/nodemask.h \
+  ../../include/linux/cpumask.h \
+    $(wildcard include/config/cpumask/offstack.h) \
+    $(wildcard include/config/hotplug/cpu.h) \
+    $(wildcard include/config/debug/per/cpu/maps.h) \
+    $(wildcard include/config/disable/obsolete/cpumask/functions.h) \
   ../../include/linux/bitmap.h \
   ../../include/linux/string.h \
     $(wildcard include/config/binary/printf.h) \
   ../../arch/arm/include/asm/string.h \
-  ../../include/linux/pageblock-flags.h \
-    $(wildcard include/config/hugetlb/page.h) \
-    $(wildcard include/config/hugetlb/page/size/variable.h) \
-  include/generated/bounds.h \
+  ../../include/linux/page-debug-flags.h \
+    $(wildcard include/config/page/poisoning.h) \
+    $(wildcard include/config/page/debug/something/else.h) \
   ../../arch/arm/include/asm/page.h \
     $(wildcard include/config/cpu/copy/v3.h) \
     $(wildcard include/config/cpu/copy/v4wt.h) \
@@ -239,6 +218,7 @@ deps_net/ipv4/netfilter/ipt_ecn.o := \
     $(wildcard include/config/cpu/copy/fa.h) \
     $(wildcard include/config/cpu/xscale.h) \
     $(wildcard include/config/cpu/copy/v6.h) \
+    $(wildcard include/config/sparsemem.h) \
   ../../arch/arm/include/asm/glue.h \
     $(wildcard include/config/cpu/arm610.h) \
     $(wildcard include/config/cpu/arm710.h) \
@@ -255,14 +235,92 @@ deps_net/ipv4/netfilter/ipt_ecn.o := \
   ../../arch/arm/include/asm/memory.h \
     $(wildcard include/config/page/offset.h) \
     $(wildcard include/config/thumb2/kernel.h) \
+    $(wildcard include/config/highmem.h) \
     $(wildcard include/config/dram/size.h) \
     $(wildcard include/config/dram/base.h) \
+    $(wildcard include/config/zone/dma.h) \
+    $(wildcard include/config/discontigmem.h) \
   ../../include/linux/const.h \
   ../../arch/arm/mach-s5pv310/include/mach/memory.h \
   ../../arch/arm/include/asm/sizes.h \
   ../../include/asm-generic/memory_model.h \
+    $(wildcard include/config/flatmem.h) \
     $(wildcard include/config/sparsemem/vmemmap.h) \
   ../../include/asm-generic/getorder.h \
+  ../../arch/arm/include/asm/mmu.h \
+    $(wildcard include/config/cpu/has/asid.h) \
+  ../../include/linux/time.h \
+    $(wildcard include/config/arch/uses/gettimeoffset.h) \
+  ../../include/linux/cache.h \
+    $(wildcard include/config/arch/has/cache/line/size.h) \
+  ../../include/linux/seqlock.h \
+  ../../include/linux/math64.h \
+  ../../include/linux/net.h \
+    $(wildcard include/config/sysctl.h) \
+  ../../include/linux/random.h \
+  ../../include/linux/ioctl.h \
+  ../../arch/arm/include/asm/ioctl.h \
+  ../../include/asm-generic/ioctl.h \
+  ../../include/linux/irqnr.h \
+  ../../include/linux/fcntl.h \
+  ../../arch/arm/include/asm/fcntl.h \
+  ../../include/asm-generic/fcntl.h \
+  ../../include/linux/rcupdate.h \
+    $(wildcard include/config/rcu/torture/test.h) \
+    $(wildcard include/config/tree/rcu.h) \
+    $(wildcard include/config/tree/preempt/rcu.h) \
+    $(wildcard include/config/tiny/rcu.h) \
+  ../../include/linux/rcutree.h \
+    $(wildcard include/config/no/hz.h) \
+  ../../include/linux/sysctl.h \
+  ../../include/linux/ratelimit.h \
+  ../../include/linux/param.h \
+  ../../arch/arm/include/asm/param.h \
+    $(wildcard include/config/hz.h) \
+  ../../include/linux/textsearch.h \
+  ../../include/linux/module.h \
+    $(wildcard include/config/symbol/prefix.h) \
+    $(wildcard include/config/modules.h) \
+    $(wildcard include/config/modversions.h) \
+    $(wildcard include/config/unused/symbols.h) \
+    $(wildcard include/config/kallsyms.h) \
+    $(wildcard include/config/tracepoints.h) \
+    $(wildcard include/config/event/tracing.h) \
+    $(wildcard include/config/module/unload.h) \
+    $(wildcard include/config/constructors.h) \
+    $(wildcard include/config/sysfs.h) \
+  ../../include/linux/stat.h \
+  ../../arch/arm/include/asm/stat.h \
+  ../../include/linux/kmod.h \
+  ../../include/linux/gfp.h \
+    $(wildcard include/config/zone/dma32.h) \
+    $(wildcard include/config/debug/vm.h) \
+  ../../include/linux/mmzone.h \
+    $(wildcard include/config/force/max/zoneorder.h) \
+    $(wildcard include/config/memory/hotplug.h) \
+    $(wildcard include/config/compaction.h) \
+    $(wildcard include/config/arch/populates/node/map.h) \
+    $(wildcard include/config/flat/node/mem/map.h) \
+    $(wildcard include/config/cgroup/mem/res/ctlr.h) \
+    $(wildcard include/config/no/bootmem.h) \
+    $(wildcard include/config/have/memory/present.h) \
+    $(wildcard include/config/have/memoryless/nodes.h) \
+    $(wildcard include/config/need/node/memmap/size.h) \
+    $(wildcard include/config/need/multiple/nodes.h) \
+    $(wildcard include/config/have/arch/early/pfn/to/nid.h) \
+    $(wildcard include/config/sparsemem/extreme.h) \
+    $(wildcard include/config/nodes/span/other/nodes.h) \
+    $(wildcard include/config/holes/in/zone.h) \
+    $(wildcard include/config/arch/has/holes/memorymodel.h) \
+  ../../include/linux/numa.h \
+    $(wildcard include/config/nodes/shift.h) \
+  ../../include/linux/init.h \
+    $(wildcard include/config/hotplug.h) \
+  ../../include/linux/nodemask.h \
+  ../../include/linux/pageblock-flags.h \
+    $(wildcard include/config/hugetlb/page.h) \
+    $(wildcard include/config/hugetlb/page/size/variable.h) \
+  include/generated/bounds.h \
   ../../include/linux/memory_hotplug.h \
     $(wildcard include/config/have/arch/nodedata/extension.h) \
     $(wildcard include/config/memory/hotremove.h) \
@@ -273,20 +331,12 @@ deps_net/ipv4/netfilter/ipt_ecn.o := \
   ../../include/asm-generic/errno-base.h \
   ../../include/linux/mutex.h \
     $(wildcard include/config/debug/mutexes.h) \
-  ../../include/linux/rwsem.h \
-    $(wildcard include/config/rwsem/generic/spinlock.h) \
-  ../../include/linux/rwsem-spinlock.h \
   ../../include/linux/srcu.h \
   ../../arch/arm/include/asm/sparsemem.h \
   ../../include/linux/topology.h \
     $(wildcard include/config/sched/smt.h) \
     $(wildcard include/config/sched/mc.h) \
     $(wildcard include/config/use/percpu/numa/node/id.h) \
-  ../../include/linux/cpumask.h \
-    $(wildcard include/config/cpumask/offstack.h) \
-    $(wildcard include/config/hotplug/cpu.h) \
-    $(wildcard include/config/debug/per/cpu/maps.h) \
-    $(wildcard include/config/disable/obsolete/cpumask/functions.h) \
   ../../include/linux/smp.h \
     $(wildcard include/config/use/generic/smp/helpers.h) \
   ../../arch/arm/include/asm/smp.h \
@@ -314,9 +364,6 @@ deps_net/ipv4/netfilter/ipt_ecn.o := \
     $(wildcard include/config/ktime/scalar.h) \
   ../../include/linux/jiffies.h \
   ../../include/linux/timex.h \
-  ../../include/linux/param.h \
-  ../../arch/arm/include/asm/param.h \
-    $(wildcard include/config/hz.h) \
   ../../arch/arm/include/asm/timex.h \
   ../../arch/arm/mach-s5pv310/include/mach/timex.h \
   ../../include/linux/debugobjects.h \
@@ -334,56 +381,10 @@ deps_net/ipv4/netfilter/ipt_ecn.o := \
     $(wildcard include/config/ia64.h) \
     $(wildcard include/config/ppc64.h) \
   ../../include/linux/tracepoint.h \
-  ../../include/linux/rcupdate.h \
-    $(wildcard include/config/rcu/torture/test.h) \
-    $(wildcard include/config/tree/rcu.h) \
-    $(wildcard include/config/tree/preempt/rcu.h) \
-    $(wildcard include/config/tiny/rcu.h) \
-  ../../include/linux/completion.h \
-  ../../include/linux/rcutree.h \
-    $(wildcard include/config/no/hz.h) \
   ../../arch/arm/include/asm/module.h \
     $(wildcard include/config/arm/unwind.h) \
   ../../include/trace/events/module.h \
   ../../include/trace/define_trace.h \
-  ../../include/linux/skbuff.h \
-    $(wildcard include/config/nf/conntrack.h) \
-    $(wildcard include/config/bridge/netfilter.h) \
-    $(wildcard include/config/xfrm.h) \
-    $(wildcard include/config/net/sched.h) \
-    $(wildcard include/config/net/cls/act.h) \
-    $(wildcard include/config/ipv6/ndisc/nodetype.h) \
-    $(wildcard include/config/net/dma.h) \
-    $(wildcard include/config/network/secmark.h) \
-  ../../include/linux/kmemcheck.h \
-  ../../include/linux/mm_types.h \
-    $(wildcard include/config/split/ptlock/cpus.h) \
-    $(wildcard include/config/want/page/debug/flags.h) \
-    $(wildcard include/config/aio.h) \
-    $(wildcard include/config/mm/owner.h) \
-    $(wildcard include/config/mmu/notifier.h) \
-  ../../include/linux/auxvec.h \
-  ../../arch/arm/include/asm/auxvec.h \
-  ../../include/linux/prio_tree.h \
-  ../../include/linux/rbtree.h \
-  ../../include/linux/page-debug-flags.h \
-    $(wildcard include/config/page/poisoning.h) \
-    $(wildcard include/config/page/debug/something/else.h) \
-  ../../arch/arm/include/asm/mmu.h \
-    $(wildcard include/config/cpu/has/asid.h) \
-  ../../include/linux/net.h \
-    $(wildcard include/config/sysctl.h) \
-  ../../include/linux/random.h \
-  ../../include/linux/ioctl.h \
-  ../../arch/arm/include/asm/ioctl.h \
-  ../../include/asm-generic/ioctl.h \
-  ../../include/linux/irqnr.h \
-  ../../include/linux/fcntl.h \
-  ../../arch/arm/include/asm/fcntl.h \
-  ../../include/asm-generic/fcntl.h \
-  ../../include/linux/sysctl.h \
-  ../../include/linux/ratelimit.h \
-  ../../include/linux/textsearch.h \
   ../../include/linux/err.h \
   ../../include/linux/slab.h \
     $(wildcard include/config/slab/debug.h) \
@@ -483,7 +484,6 @@ deps_net/ipv4/netfilter/ipt_ecn.o := \
     $(wildcard include/config/have/generic/dma/coherent.h) \
   ../../include/linux/hrtimer.h \
     $(wildcard include/config/high/res/timers.h) \
-  ../../include/linux/ip.h \
   ../../include/net/ip.h \
     $(wildcard include/config/inet.h) \
     $(wildcard include/config/ipv6.h) \
@@ -724,8 +724,7 @@ deps_net/ipv4/netfilter/ipt_ecn.o := \
   ../../include/linux/netfilter_ipv4.h \
   ../../include/linux/netfilter_ipv4/ip_tables.h \
   ../../include/linux/netfilter/xt_tcpudp.h \
-  ../../include/linux/netfilter_ipv4/ipt_ECN.h \
-  ../../include/linux/netfilter/xt_DSCP.h \
+  ../../include/linux/netfilter_ipv4/ipt_ecn.h \
   ../../include/linux/netfilter/xt_dscp.h \
 
 net/ipv4/netfilter/ipt_ecn.o: $(deps_net/ipv4/netfilter/ipt_ecn.o)

@@ -612,6 +612,7 @@ deps_drivers/scsi/scsi_error.o := \
   ../../include/linux/transport_class.h \
   ../../include/linux/attribute_container.h \
   ../../include/scsi/scsi_host.h \
+    $(wildcard include/config/usb/host/notify.h) \
   ../../include/scsi/scsi_ioctl.h \
   ../../drivers/scsi/scsi_priv.h \
     $(wildcard include/config/scsi/proc/fs.h) \

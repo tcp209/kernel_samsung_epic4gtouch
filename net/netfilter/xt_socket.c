@@ -383,7 +383,7 @@ static int __init socket_mt_init(void)
 {
 	nf_defrag_ipv4_enable();
 #ifdef XT_SOCKET_HAVE_IPV6
-	//nf_defrag_ipv6_enable();
+	nf_defrag_ipv6_enable();
 #endif
 
 	return xt_register_matches(socket_mt_reg, ARRAY_SIZE(socket_mt_reg));

@@ -606,6 +606,7 @@ deps_drivers/usb/storage/initializers.o := \
     $(wildcard include/config/need/sg/dma/length.h) \
   ../../include/linux/elevator.h \
   ../../include/scsi/scsi_host.h \
+    $(wildcard include/config/usb/host/notify.h) \
   ../../include/scsi/scsi.h \
   ../../drivers/usb/storage/initializers.h \
   ../../drivers/usb/storage/transport.h \

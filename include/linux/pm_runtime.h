@@ -40,7 +40,7 @@ extern int pm_generic_runtime_idle(struct device *dev);
 extern int pm_generic_runtime_suspend(struct device *dev);
 extern int pm_generic_runtime_resume(struct device *dev);
 //extern void __pm_runtime_use_autosuspend(struct device *dev, bool use);
-//extern void pm_runtime_set_autosuspend_delay(struct device *dev, int delay);
+extern void pm_runtime_set_autosuspend_delay(struct device *dev, int delay);
 
 static inline bool pm_children_suspended(struct device *dev)
 {
@@ -124,8 +124,8 @@ static inline int pm_generic_runtime_suspend(struct device *dev) { return 0; }
 static inline int pm_generic_runtime_resume(struct device *dev) { return 0; }
 //static inline void __pm_runtime_use_autosuspend(struct device *dev,
 //						bool use) {}
-//static inline void pm_runtime_set_autosuspend_delay(struct device *dev,
-//						int delay) {}
+static inline void pm_runtime_set_autosuspend_delay(struct device *dev,
+						int delay) {}
 
 
 #endif /* !CONFIG_PM_RUNTIME */

@@ -618,6 +618,7 @@ deps_drivers/usb/storage/protocol.o := \
   ../../include/linux/usb_usual.h \
     $(wildcard include/config/usb/libusual.h) \
   ../../include/scsi/scsi_host.h \
+    $(wildcard include/config/usb/host/notify.h) \
   ../../drivers/usb/storage/protocol.h \
   ../../drivers/usb/storage/debug.h \
     $(wildcard include/config/usb/storage/debug.h) \

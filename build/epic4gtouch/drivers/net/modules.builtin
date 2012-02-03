@@ -1,4 +1,3 @@
-kernel/drivers/net/mii.ko
 kernel/drivers/net/ppp_generic.ko
 kernel/drivers/net/ppp_async.ko
 kernel/drivers/net/ppp_synctty.ko
@@ -13,7 +12,4 @@ kernel/drivers/net/pppox.ko
 kernel/drivers/net/pppopns.ko
 kernel/drivers/net/slhc.ko
 kernel/drivers/net/tun.ko
-kernel/drivers/net/usb/usbnet.ko
-kernel/drivers/net/usb/cdc-svnet.ko
-kernel/drivers/net/usb/sipc4.ko
-kernel/drivers/net/usb/pdp.ko
+kernel/drivers/net/wireless/bcmdhd/bcmdhd.ko

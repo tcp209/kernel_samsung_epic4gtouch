@@ -604,6 +604,7 @@ deps_drivers/scsi/scsi_proc.o := \
   ../../include/scsi/scsi.h \
   ../../include/scsi/scsi_device.h \
   ../../include/scsi/scsi_host.h \
+    $(wildcard include/config/usb/host/notify.h) \
   ../../include/scsi/scsi_transport.h \
   ../../include/linux/transport_class.h \
   ../../include/linux/attribute_container.h \

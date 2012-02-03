@@ -597,6 +597,7 @@ deps_drivers/scsi/constants.o := \
     $(wildcard include/config/have/generic/dma/coherent.h) \
   ../../include/scsi/scsi_device.h \
   ../../include/scsi/scsi_host.h \
+    $(wildcard include/config/usb/host/notify.h) \
   ../../include/scsi/scsi_eh.h \
   ../../include/scsi/scsi_dbg.h \
 

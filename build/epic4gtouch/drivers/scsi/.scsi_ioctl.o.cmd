@@ -601,6 +601,7 @@ deps_drivers/scsi/scsi_ioctl.o := \
   ../../include/scsi/scsi_device.h \
   ../../include/scsi/scsi_eh.h \
   ../../include/scsi/scsi_host.h \
+    $(wildcard include/config/usb/host/notify.h) \
   ../../include/scsi/scsi_ioctl.h \
   ../../include/scsi/sg.h \
   ../../include/scsi/scsi_dbg.h \

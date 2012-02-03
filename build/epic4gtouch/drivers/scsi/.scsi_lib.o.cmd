@@ -637,6 +637,7 @@ deps_drivers/scsi/scsi_lib.o := \
   ../../include/scsi/scsi_driver.h \
   ../../include/scsi/scsi_eh.h \
   ../../include/scsi/scsi_host.h \
+    $(wildcard include/config/usb/host/notify.h) \
   ../../drivers/scsi/scsi_priv.h \
     $(wildcard include/config/scsi/logging.h) \
     $(wildcard include/config/scsi/proc/fs.h) \

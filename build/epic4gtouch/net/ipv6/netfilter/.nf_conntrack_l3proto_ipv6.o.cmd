@@ -2,9 +2,7 @@ cmd_net/ipv6/netfilter/nf_conntrack_l3proto_ipv6.o := ccache /drive2/Android/CM9
 
 deps_net/ipv6/netfilter/nf_conntrack_l3proto_ipv6.o := \
   ../../net/ipv6/netfilter/nf_conntrack_l3proto_ipv6.c \
-    $(wildcard include/config/bridge/netfilter.h) \
     $(wildcard include/config/nf/ct/netlink.h) \
-    $(wildcard include/config/sysctl.h) \
   ../../include/linux/types.h \
     $(wildcard include/config/uid16.h) \
     $(wildcard include/config/lbdaf.h) \
@@ -44,6 +42,7 @@ deps_net/ipv6/netfilter/nf_conntrack_l3proto_ipv6.o := \
   ../../include/linux/icmpv6.h \
   ../../include/linux/skbuff.h \
     $(wildcard include/config/nf/conntrack.h) \
+    $(wildcard include/config/bridge/netfilter.h) \
     $(wildcard include/config/xfrm.h) \
     $(wildcard include/config/net/sched.h) \
     $(wildcard include/config/net/cls/act.h) \
@@ -262,6 +261,7 @@ deps_net/ipv6/netfilter/nf_conntrack_l3proto_ipv6.o := \
   ../../include/linux/seqlock.h \
   ../../include/linux/math64.h \
   ../../include/linux/net.h \
+    $(wildcard include/config/sysctl.h) \
   ../../include/linux/socket.h \
   ../../arch/arm/include/asm/socket.h \
   ../../arch/arm/include/asm/sockios.h \
@@ -770,6 +770,7 @@ deps_net/ipv6/netfilter/nf_conntrack_l3proto_ipv6.o := \
   ../../include/net/netfilter/nf_conntrack_expect.h \
   ../../include/net/netfilter/nf_conntrack_zones.h \
     $(wildcard include/config/nf/conntrack/zones.h) \
+  ../../include/net/netfilter/ipv6/nf_defrag_ipv6.h \
   ../../include/net/netfilter/nf_log.h \
   ../../include/linux/netfilter/nfnetlink.h \
   ../../include/linux/netfilter/nfnetlink_compat.h \

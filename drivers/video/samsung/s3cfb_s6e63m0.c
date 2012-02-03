@@ -1,8 +1,6 @@
 /*
  * S6E63M0 AMOLED LCD panel driver.
  *
- * Derived from drivers/video/omap/lcd-apollon.c
- *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms of the GNU General Public License as published by the
  * Free Software Foundation; either version 2 of the License, or (at your
@@ -231,7 +229,7 @@ static int s6e63m0_gamma_ctl(struct s6e63m0 *lcd)
 
 	ret = s6e63m0_panel_send_sequence(lcd, gamma);
 	if (ret) {
-		ret = -1;
+		ret = -EPERM;
 		goto gamma_err;
 	}
 
@@ -345,7 +343,7 @@ static int s6e63m0_set_acl(struct s6e63m0 *lcd)
 	}
 
 	if (ret) {
-		ret = -1;
+		ret = -EPERM;
 		goto acl_err;
 	}
 
@@ -614,20 +612,20 @@ device_attribute *attr, const char *buf, size_t size)
 static DEVICE_ATTR(acl_set, 0664,
 		acl_set_show, acl_set_store);
 
-#if 0
+
 static ssize_t lcdtype_show(struct device *dev, struct
 device_attribute *attr, char *buf)
 {
 
 	char temp[15];
-	sprintf(temp, "SMD_AMS427G03\n");
+	sprintf(temp, "SMD_AMS397GE46\n");
 	strcat(buf, temp);
 	return strlen(buf);
 }
 
 static DEVICE_ATTR(lcdtype, 0664,
 		lcdtype_show, NULL);
-
+#if 0
 static ssize_t octa_lcdtype_show(struct device *dev, struct
 device_attribute *attr, char *buf)
 {
@@ -750,8 +748,6 @@ static int s6e63m0_probe(struct spi_device *spi)
 		goto err_alloc;
 	}
 
-	mutex_init(&lcd->lock);
-
 	/* s6e63m0 lcd panel uses 3-wire 9bits SPI Mode. */
 	spi->bits_per_word = 9;
 
@@ -781,7 +777,7 @@ static int s6e63m0_probe(struct spi_device *spi)
 		lcd, &s6e63m0_backlight_ops, NULL);
 	if (IS_ERR(lcd->bd)) {
 		ret = PTR_ERR(lcd->bd);
-		goto out_free_lcd;
+		goto out_free_backlight;
 	}
 
 	lcd->bd->props.max_brightness = MAX_BRIGHTNESS;
@@ -805,6 +801,10 @@ static int s6e63m0_probe(struct spi_device *spi)
 		dev_err(&(lcd->ld->dev), "failed to add sysfs entries\n");
 
 	ret = device_create_file(&(spi->dev), &dev_attr_acl_set);
+	if (ret < 0)
+		dev_err(&(lcd->ld->dev), "failed to add sysfs entries\n");
+
+	ret = device_create_file(&(spi->dev), &dev_attr_lcdtype);
 	if (ret < 0)
 		dev_err(&(lcd->ld->dev), "failed to add sysfs entries\n");
 
@@ -839,13 +839,20 @@ static int s6e63m0_probe(struct spi_device *spi)
 	lcd->early_suspend.level = EARLY_SUSPEND_LEVEL_DISABLE_FB - 1;
 	register_early_suspend(&lcd->early_suspend);
 #endif
+
+	mutex_init(&lcd->lock);
+
 	dev_info(&(lcd->ld->dev), "s6e63m0 panel driver has been probed.\n");
 
 	return 0;
 
-out_free_lcd:
-	mutex_destroy(&lcd->lock);
+out_free_backlight:
+	lcd_device_unregister(lcd->ld);
 	kfree(lcd);
+	return ret;
+out_free_lcd:
+	kfree(lcd);
+	return ret;
 err_alloc:
 	return ret;
 }
@@ -856,6 +863,8 @@ static int __devexit s6e63m0_remove(struct spi_device *spi)
 
 	s6e63m0_power(lcd, FB_BLANK_POWERDOWN);
 	lcd_device_unregister(lcd->ld);
+	backlight_device_unregister(lcd->bd);
+	kfree(lcd);
 
 	return 0;
 }
@@ -891,7 +900,5 @@ static void __exit s6e63m0_exit(void)
 
 module_init(s6e63m0_init);
 module_exit(s6e63m0_exit);
-
-MODULE_AUTHOR("Donghwa Lee <dh09.lee@samsung.com>");
-MODULE_DESCRIPTION("s6e63m0 LCD Driver");
+MODULE_DESCRIPTION("S6E63M0 AMOLED LCD Driver");
 MODULE_LICENSE("GPL");

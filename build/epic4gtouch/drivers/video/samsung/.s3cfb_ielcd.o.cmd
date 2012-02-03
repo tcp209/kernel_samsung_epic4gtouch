@@ -2,6 +2,7 @@ cmd_drivers/video/samsung/s3cfb_ielcd.o := ccache /drive2/Android/CM9/prebuilt/l
 
 deps_drivers/video/samsung/s3cfb_ielcd.o := \
   ../../drivers/video/samsung/s3cfb_ielcd.c \
+    $(wildcard include/config/fb/s3c/mipi/lcd.h) \
   ../../include/linux/module.h \
     $(wildcard include/config/symbol/prefix.h) \
     $(wildcard include/config/modules.h) \
@@ -606,7 +607,6 @@ deps_drivers/video/samsung/s3cfb_ielcd.o := \
   ../../include/linux/io.h \
     $(wildcard include/config/has/ioport.h) \
   ../../arch/arm/mach-s5pv310/include/mach/map.h \
-    $(wildcard include/config/fb/s3c/mipi/lcd.h) \
     $(wildcard include/config/target/locale/na.h) \
   ../../arch/arm/plat-samsung/include/plat/map-base.h \
   ../../arch/arm/plat-s5p/include/plat/map-s5p.h \

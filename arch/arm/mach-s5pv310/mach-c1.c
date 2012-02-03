@@ -48,8 +48,6 @@
 #include <linux/android_pmem.h>
 #endif
 #include <linux/bootmem.h>
-#include <linux/reboot.h>
-#include <linux/host_notify.h>
 
 #include <asm/pmu.h>
 #include <asm/mach/arch.h>
@@ -219,9 +217,9 @@ static ssize_t c1_switch_store_vbus(struct device *dev,
 
 	pr_info("%s: disable=%d\n", __func__, disable);
 	usb_mode = disable ? USB_CABLE_DETACHED_WITHOUT_NOTI : USB_CABLE_ATTACHED;
-	ret = udc->change_usb_mode(usb_mode);
-	if (ret < 0)
-		pr_err("%s: fail to change mode!!!\n", __func__);
+	//ret = udc->change_usb_mode(usb_mode);
+	//if (ret < 0)
+	//	pr_err("%s: fail to change mode!!!\n", __func__);
 
 	regulator = regulator_get(NULL, "safeout1");
 	if (IS_ERR(regulator)) {
@@ -3011,12 +3009,12 @@ static int max8997_muic_charger_cb(cable_type_t cable_type)
 	struct power_supply *psy = power_supply_get_by_name("battery");
 	union power_supply_propval value;
 
-	if(!psy) {
+	if (!psy) {
 		pr_err("%s: fail to get battery ps\n", __func__);
 		return -ENODEV;
 	}
 
-	switch(cable_type) {
+	switch (cable_type) {
 	case CABLE_TYPE_NONE:
 	case CABLE_TYPE_OTG:
 	case CABLE_TYPE_JIG_UART_OFF:
@@ -3066,9 +3064,10 @@ static void max8997_muic_usb_cb(u8 usb_mode)
 
 	if (lpcharging == 1) {
 		pr_info("%s: lpcharging: disable USB\n", __func__);
-		ret = udc->change_usb_mode(USB_CABLE_DETACHED);
-		if (ret < 0)
-			pr_warn("%s: fail to change mode!!!\n", __func__);
+		//ret = udc->change_usb_mode(USB_CABLE_DETACHED);
+		//if (ret < 0)
+		//	pr_warn("%s: fail to change mode!!!\n", __func__);
+
 		regulator = regulator_get(NULL, "safeout1");
 		if (IS_ERR(regulator)) {
 			pr_err("%s: fail to get regulator\n", __func__);
@@ -3093,12 +3092,13 @@ static void max8997_muic_usb_cb(u8 usb_mode)
 			max8997_muic_charger_cb(CABLE_TYPE_OTG);
 		}
 
-		prev_usb_mode = udc->get_usb_mode();
-		pr_info("%s: prev_usb_mode=%d\n", __func__, prev_usb_mode);
+	//	prev_usb_mode = udc->get_usb_mode();
+	//	pr_info("%s: prev_usb_mode=%d\n", __func__, prev_usb_mode);
 
-		ret = udc->change_usb_mode(usb_mode);
-		if (ret < 0)
-			pr_err("%s: fail to change mode!!!\n", __func__);
+	//	ret = udc->change_usb_mode(usb_mode);
+	//	if (ret < 0)
+	//		pr_err("%s: fail to change mode!!!\n", __func__);
+
 		if (usb_mode == USB_OTGHOST_DETACHED)
 			otg_data->set_pwr_cb(0);
 	}
@@ -3717,8 +3717,6 @@ static u8 t23_config_e[] = {TOUCH_PROXIMITY_T23,
 static u8 t25_config_e[] = {SPT_SELFTEST_T25,
 				0, 0, 0, 0, 0, 0, 0, 0};
 
-//static u8 t38_config_e[] = {SPT_USERDATA_T38,
-//				0,1,14,23,44,0,0,0};
 static u8 t40_config_e[] = {PROCI_GRIPSUPPRESSION_T40,
 				0, 0, 0, 0, 0};
 
@@ -3745,7 +3743,7 @@ static u8 t48_config_e_ta[] = {PROCG_NOISESUPPRESSION_T48,
 				10,		/* MOVHYSTI */
 				1, 15,
 				10, 5, 40, 240, 245, 10, 10, 148, 50, 143,
-				80, 18, 10, 0};
+				80, 18, 10, 2};
 static u8 t48_config_e[] = {PROCG_NOISESUPPRESSION_T48,
 				1, 4, 0x40, 0, 0, 0, 0, 0, 0, 0,
 				0, 0, 0, 6, 6, 0, 0, 100, 4, 64,
@@ -3793,7 +3791,6 @@ static const u8 *mxt224e_config[] = {
 	t18_config_e,
 	t23_config_e,
 	t25_config_e,
-//	t38_config_e,
 	t40_config_e,
 	t42_config_e,
 	t46_config_e,
@@ -7194,15 +7191,12 @@ static struct platform_device *smdkc210_devices[] __initdata = {
 #ifdef CONFIG_USB_GADGET
 	&s3c_device_usbgadget,
 #endif
-#ifdef CONFIG_USB_ANDROID
-	&s3c_device_android_usb,
-#ifdef CONFIG_USB_ANDROID_MASS_STORAGE
-	&s3c_device_usb_mass_storage,
-#endif
 #ifdef CONFIG_USB_ANDROID_RNDIS
 	&s3c_device_rndis,
 #endif
-
+#ifdef CONFIG_USB_ANDROID
+	&s3c_device_android_usb,
+	&s3c_device_usb_mass_storage,
 #endif
 #ifdef CONFIG_USB_S3C_OTG_HOST
 	&s3c_device_usb_otghcd,
@@ -7449,9 +7443,6 @@ static void c1_reboot(char str, const char *cmd)
 			writel(REBOOT_PREFIX | REBOOT_MODE_RECOVERY,
 			       S5P_INFORM3);
 		else if (!strcmp(cmd, "download"))
-			writel(REBOOT_PREFIX | REBOOT_MODE_DOWNLOAD,
-			       S5P_INFORM3);
-		else if (!strcmp(cmd, "bootloader"))
 			writel(REBOOT_PREFIX | REBOOT_MODE_DOWNLOAD,
 			       S5P_INFORM3);
 		else if (!strcmp(cmd, "upload"))
@@ -7952,14 +7943,12 @@ static void __init smdkc210_machine_init(void)
 	uart_switch_init();
 	c1_sound_init();
 
-//#ifdef CONFIG_USB_ANDROID_SAMSUNG_COMPOSITE
+#ifdef CONFIG_USB_ANDROID_SAMSUNG_COMPOSITE
 /* soonyong.cho : This is for setting unique serial number */
-	//s3c_usb_set_serial();
+	s3c_usb_set_serial();
 /* Changes value of nluns in order to use external storage */
-	//usb_device_init();
-//#else
- //   s3c_usb_otg_composite_pdata(&fb_platform_data);
-//#endif
+	usb_device_init();
+#endif
 
 /* klaatu: semaphore logging code - for debug  */
 	debug_semaphore_init();

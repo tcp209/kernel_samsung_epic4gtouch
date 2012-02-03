@@ -630,6 +630,7 @@ deps_drivers/scsi/sd.o := \
   ../../include/scsi/scsi_driver.h \
   ../../include/scsi/scsi_eh.h \
   ../../include/scsi/scsi_host.h \
+    $(wildcard include/config/usb/host/notify.h) \
   ../../include/scsi/scsi_ioctl.h \
   ../../include/scsi/scsicam.h \
   ../../drivers/scsi/sd.h \

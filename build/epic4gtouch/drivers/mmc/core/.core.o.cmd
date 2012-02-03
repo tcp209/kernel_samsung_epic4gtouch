@@ -587,25 +587,6 @@ deps_drivers/mmc/core/core.o := \
   ../../include/linux/mmc/card.h \
     $(wildcard include/config/mmc/discard/merge.h) \
   ../../include/linux/mmc/core.h \
-  ../../include/linux/mmc/discard.h \
-  ../../include/linux/proc_fs.h \
-    $(wildcard include/config/proc/devicetree.h) \
-    $(wildcard include/config/proc/kcore.h) \
-  ../../include/linux/slab.h \
-    $(wildcard include/config/slab/debug.h) \
-    $(wildcard include/config/failslab.h) \
-    $(wildcard include/config/slub.h) \
-    $(wildcard include/config/slob.h) \
-    $(wildcard include/config/debug/slab.h) \
-  ../../include/linux/slub_def.h \
-    $(wildcard include/config/slub/stats.h) \
-    $(wildcard include/config/slub/debug.h) \
-  ../../include/linux/kmemtrace.h \
-    $(wildcard include/config/kmemtrace.h) \
-  ../../include/trace/events/kmem.h \
-  ../../include/linux/kmemleak.h \
-    $(wildcard include/config/debug/kmemleak.h) \
-  ../../include/linux/magic.h \
   ../../include/linux/mmc/host.h \
   ../../include/linux/mmc/pm.h \
   ../../include/linux/mmc/mmc.h \

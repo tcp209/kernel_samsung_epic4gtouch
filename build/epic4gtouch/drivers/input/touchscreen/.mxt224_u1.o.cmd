@@ -8,6 +8,7 @@ deps_drivers/input/touchscreen/mxt224_u1.o := \
     $(wildcard include/config/mach/c1/na/spr/epic2/rev00.h) \
     $(wildcard include/config/target/locale/na.h) \
     $(wildcard include/config/t8.h) \
+    $(wildcard include/config/t46.h) \
     $(wildcard include/config/kernel/debug/sec.h) \
     $(wildcard include/config/t7.h) \
     $(wildcard include/config/has/earlysuspend.h) \
@@ -563,7 +564,6 @@ deps_drivers/input/touchscreen/mxt224_u1.o := \
     $(wildcard include/config/fm/si4709.h) \
   ../../include/linux/i2c/mxt224_u1.h \
     $(wildcard include/config/t18.h) \
-    $(wildcard include/config/t46.h) \
     $(wildcard include/config/t28.h) \
   ../../arch/arm/include/asm/unaligned.h \
   ../../include/linux/unaligned/le_byteshift.h \

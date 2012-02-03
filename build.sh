@@ -1,5 +1,5 @@
 #!/bin/bash -x
-
+#
 setup ()
 {
     if [ x = "x$ANDROID_BUILD_TOP" ] ; then
@@ -10,7 +10,7 @@ setup ()
 
     KERNEL_DIR="$(dirname "$(readlink -f "$0")")"
     BUILD_DIR="$KERNEL_DIR/build"
-    MODULES=("drivers/bluetooth/bthid/bthid.ko" "drivers/samsung/j4fs/j4fs.ko" "drivers/media/video/gspca/gspca_main.ko" "drivers/scsi/scsi_wait_scan.ko" "drivers/net/wireless/bcm4330/dhd.ko" "drivers/samsung/vibetonz/vibrator.ko" "fs/cifs/cifs.ko" "drivers/staging/westbridge/astoria/switch/cyasswitch.ko")
+    MODULES=("drivers/bluetooth/bthid/bthid.ko"  "drivers/samsung/j4fs/j4fs.ko" "drivers/media/video/gspca/gspca_main.ko" "drivers/net/wireless/bcm4330/dhd.ko" "drivers/scsi/scsi_wait_scan.ko" "drivers/samsung/vibetonz/vibrator.ko" "fs/cifs/cifs.ko" "drivers/staging/westbridge/astoria/switch/cyasswitch.ko")
 
     if [ x = "x$NO_CCACHE" ] && ccache -V &>/dev/null ; then
         CCACHE=ccache

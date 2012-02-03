@@ -3,6 +3,7 @@ cmd_drivers/media/video/samsung/mhl_v1/sii9234.o := ccache /drive2/Android/CM9/p
 deps_drivers/media/video/samsung/mhl_v1/sii9234.o := \
   ../../drivers/media/video/samsung/mhl_v1/sii9234.c \
     $(wildcard include/config/target/locale/kor.h) \
+    $(wildcard include/config/mach/c1/na/spr/epic2/rev00.h) \
   ../../include/linux/interrupt.h \
     $(wildcard include/config/generic/hardirqs.h) \
     $(wildcard include/config/lockdep.h) \
@@ -508,7 +509,6 @@ deps_drivers/media/video/samsung/mhl_v1/sii9234.o := \
     $(wildcard include/config/mach/c1/rev01.h) \
     $(wildcard include/config/mach/c1/na/spr/rev02.h) \
     $(wildcard include/config/mach/c1/na/spr/rev05.h) \
-    $(wildcard include/config/mach/c1/na/spr/epic2/rev00.h) \
   ../../arch/arm/mach-s5pv310/include/mach/gpio-c1-na-spr-rev05.h \
     $(wildcard include/config/isdbt/fc8100.h) \
     $(wildcard include/config/max8922/charger.h) \

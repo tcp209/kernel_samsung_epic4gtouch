@@ -627,6 +627,7 @@ deps_drivers/scsi/sg.o := \
   ../../include/scsi/scsi_eh.h \
   ../../include/scsi/scsi_tcq.h \
   ../../include/scsi/scsi_host.h \
+    $(wildcard include/config/usb/host/notify.h) \
   ../../drivers/scsi/scsi_typedefs.h \
   ../../include/scsi/scsi_dbg.h \
   ../../include/scsi/scsi_driver.h \

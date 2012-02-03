@@ -1,0 +1,54 @@
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c: In function 'InitCBusRegs':
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:1106: warning: large integer implicitly truncated to unsigned type
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:1108: warning: large integer implicitly truncated to unsigned type
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:1111: warning: large integer implicitly truncated to unsigned type
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:1112: warning: large integer implicitly truncated to unsigned type
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:1115: warning: large integer implicitly truncated to unsigned type
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c: In function 'ProcessRgnd':
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:1296: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c: In function 'AppRcpDemo':
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2575: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2579: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2583: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2587: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2591: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2595: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2599: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2603: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2607: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2611: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2615: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2619: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2623: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2627: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2631: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2635: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2639: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2643: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2647: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2651: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2655: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2659: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2663: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2667: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2671: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2675: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2679: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2683: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2687: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2691: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2695: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2699: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2703: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2707: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2711: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2715: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2719: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2723: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2727: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2731: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2735: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2739: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:2743: warning: too many arguments for format
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c: At top level:
+../../drivers/media/video/samsung/mhl_v1/sii9234_driver.c:1430: warning: 'For_check_resen_int' defined but not used

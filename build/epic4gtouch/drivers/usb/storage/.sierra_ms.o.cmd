@@ -26,6 +26,7 @@ deps_drivers/usb/storage/sierra_ms.o := \
   ../../arch/arm/include/asm/posix_types.h \
   ../../include/scsi/scsi_host.h \
     $(wildcard include/config/compat.h) \
+    $(wildcard include/config/usb/host/notify.h) \
     $(wildcard include/config/blk/dev/integrity.h) \
   ../../include/linux/device.h \
     $(wildcard include/config/of.h) \

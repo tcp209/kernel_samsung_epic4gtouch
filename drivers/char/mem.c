@@ -38,6 +38,10 @@
 # include "s5p_vmem.h"
 #endif
 
+#ifdef CONFIG_S3C_MEM
+# include "s3c_mem.h"
+#endif
+
 static inline unsigned long size_inside_page(unsigned long start,
 					     unsigned long size)
 {
@@ -967,6 +971,10 @@ static int __init chr_dev_init(void)
 			      NULL, devlist[minor].name);
 	}
 
+	#ifdef CONFIG_S3C_MEM
+	s3c_dma_init();
+	#endif
+	
 	return tty_init();
 }
 

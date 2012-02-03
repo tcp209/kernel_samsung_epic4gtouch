@@ -16,7 +16,7 @@
 #include <linux/clk.h>
 #include <linux/mutex.h>
 #include <linux/poll.h>
-#include <linux/wait.h> 
+#include <linux/wait.h>
 #include <linux/fs.h>
 #include <linux/irq.h>
 #include <linux/mm.h>
@@ -91,25 +91,34 @@ int s3c_ielcd_logic_stop(void)
 
 int s3c_ielcd_start(void)
 {
-	unsigned int con;
+	unsigned int cfg;
 
-	con = s3c_ielcd_readl(S3C_IELCD_VIDCON0);
-	con |= (S3C_VIDCON0_ENVID_ENABLE | S3C_VIDCON0_ENVID_F_ENABLE);
-	s3c_ielcd_writel(con, S3C_IELCD_VIDCON0);
+	cfg = s3c_ielcd_readl(S3C_IELCD_VIDCON0);
+	cfg |= (S3C_VIDCON0_ENVID_ENABLE | S3C_VIDCON0_ENVID_F_ENABLE);
+	s3c_ielcd_writel(cfg, S3C_IELCD_VIDCON0);
 
 	return 0;
-}
+}  
 
 int s3c_ielcd_stop(void)
 {
-	unsigned int con;
+	unsigned int cfg,ielcd_count=0;
+	
+	cfg = s3c_ielcd_readl(S3C_IELCD_VIDCON0);
+	cfg |= S3C_VIDCON0_ENVID_ENABLE;
+	cfg &= ~(S3C_VIDCON0_ENVID_F_ENABLE);
+	
+	s3c_ielcd_writel(cfg, S3C_IELCD_VIDCON0);
+	
+	do { 
+		if(++ielcd_count>2000000){
+			printk("ielcd off fail\n");
+			return 1;
+		}	
 
-	con = s3c_ielcd_readl(S3C_IELCD_VIDCON0);
-	/*con &= ~(S3C_VIDCON0_ENVID_ENABLE| S3C_VIDCON0_ENVID_F_ENABLE);*/
-	con &= ~(S3C_VIDCON0_ENVID_F_ENABLE);
-	s3c_ielcd_writel(con, S3C_IELCD_VIDCON0);
-
-	return 0;
+		if ( !(s3c_ielcd_readl(S3C_IELCD_VIDCON1) & 0xffff0000))
+			return 0;
+	} while(1);
 }
 
 int s3c_ielcd_init_global(struct s3cfb_global *ctrl)
@@ -119,7 +128,11 @@ int s3c_ielcd_init_global(struct s3cfb_global *ctrl)
 	*ielcd_fbdev = *ctrl;
 	ielcd_fbdev->regs = s3c_ielcd_base;
 
+#ifdef CONFIG_FB_S3C_MIPI_LCD
+	s3cfb_set_polarity_only(ielcd_fbdev);
+#else
 	s3cfb_set_polarity(ielcd_fbdev);
+#endif
 	s3cfb_set_timing(ielcd_fbdev);
 	s3cfb_set_lcd_size(ielcd_fbdev);
 
@@ -131,8 +144,12 @@ int s3c_ielcd_init_global(struct s3cfb_global *ctrl)
 	 * read from lcd vid con
 	 */
 	cfg = readl(ctrl->regs + S3C_VIDCON0);
-	cfg &= ~((7 << 26) |  (1 << 5) | (1 << 0));
-	cfg |= (0  << 26 | 1 << 5);
+	cfg &= ~((7 << 26) | (1 << 5) | (1 << 0));
+#ifdef CONFIG_FB_S3C_MIPI_LCD
+	cfg |= (0 << 26 | 0 << 5);
+#else
+	cfg |= (0 << 26 | 1 << 5);
+#endif
 
 	s3c_ielcd_writel(cfg, S3C_IELCD_VIDCON0);
 

@@ -412,7 +412,7 @@ static int __init tproxy_tg_init(void)
 {
 	nf_defrag_ipv4_enable();
 #ifdef XT_TPROXY_HAVE_IPV6
-//	nf_defrag_ipv6_enable();
+	nf_defrag_ipv6_enable();
 #endif
 
 	return xt_register_targets(tproxy_tg_reg, ARRAY_SIZE(tproxy_tg_reg));

@@ -4,6 +4,7 @@ deps_drivers/char/mem.o := \
   ../../drivers/char/mem.c \
     $(wildcard include/config/ia64.h) \
     $(wildcard include/config/s5p/vmem.h) \
+    $(wildcard include/config/s3c/mem.h) \
     $(wildcard include/config/devmem.h) \
     $(wildcard include/config/devkmem.h) \
     $(wildcard include/config/strict/devmem.h) \
@@ -12,7 +13,6 @@ deps_drivers/char/mem.o := \
     $(wildcard include/config/have/ioremap/prot.h) \
     $(wildcard include/config/crash/dump.h) \
     $(wildcard include/config/devport.h) \
-    $(wildcard include/config/s3c/mem.h) \
   ../../include/linux/mm.h \
     $(wildcard include/config/discontigmem.h) \
     $(wildcard include/config/sysctl.h) \
@@ -597,6 +597,8 @@ deps_drivers/char/mem.o := \
   ../../include/linux/pipe_fs_i.h \
   ../../arch/arm/include/asm/io.h \
   ../../arch/arm/mach-s5pv310/include/mach/io.h \
+  ../../drivers/char/s3c_mem.h \
+    $(wildcard include/config/s3c/dma/mem.h) \
 
 drivers/char/mem.o: $(deps_drivers/char/mem.o)
 

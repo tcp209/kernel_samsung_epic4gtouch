@@ -129,7 +129,6 @@ deps_arch/arm/mach-s5pv310/mach-c1.o := \
     $(wildcard include/config/sata/ahci/platform.h) \
     $(wildcard include/config/have/pwm.h) \
     $(wildcard include/config/video/tsi.h) \
-    $(wildcard include/config/usb/android/mass/storage.h) \
     $(wildcard include/config/usb/android/samsung/composite.h) \
     $(wildcard include/config/pm/runtime.h) \
     $(wildcard include/config/video/samsung/memsize/fimd.h) \
@@ -853,10 +852,6 @@ deps_arch/arm/mach-s5pv310/mach-c1.o := \
   ../../arch/arm/include/asm/dma.h \
     $(wildcard include/config/isa/dma/api.h) \
     $(wildcard include/config/pci.h) \
-  ../../include/linux/reboot.h \
-  ../../arch/arm/include/asm/emergency-restart.h \
-  ../../include/asm-generic/emergency-restart.h \
-  ../../include/linux/host_notify.h \
   ../../arch/arm/include/asm/pmu.h \
     $(wildcard include/config/cpu/has/pmu.h) \
   ../../arch/arm/include/asm/mach/arch.h \
@@ -3862,7 +3857,7 @@ deps_arch/arm/mach-s5pv310/mach-c1.o := \
   ../../include/media/s5k4ea_platform.h \
   ../../include/media/s5k6aa_platform.h \
   ../../include/media/m5mo_platform.h \
-  ../../include/media/s5k5bbgx_platform.h \
+  ../../include/media/s5k5bafx_platform.h \
   ../../arch/arm/mach-s5pv310/include/mach/regs-gpio.h \
   ../../arch/arm/mach-s5pv310/include/mach/map.h \
   ../../arch/arm/plat-samsung/include/plat/map-base.h \
@@ -3923,6 +3918,7 @@ deps_arch/arm/mach-s5pv310/mach-c1.o := \
   ../../include/linux/usb/gadget.h \
     $(wildcard include/config/usb/gadget/dualspeed.h) \
     $(wildcard include/config/usb/otg.h) \
+  ../../include/linux/host_notify.h \
   ../../arch/arm/include/../../../drivers/video/samsung/s3cfb.h \
     $(wildcard include/config/vcm.h) \
     $(wildcard include/config/support/ump.h) \
@@ -3958,6 +3954,7 @@ deps_arch/arm/mach-s5pv310/mach-c1.o := \
     $(wildcard include/config/async/tx/disable/channel/switch.h) \
     $(wildcard include/config/dma/engine.h) \
     $(wildcard include/config/async/tx/dma.h) \
+  ../../include/linux/usb3803.h \
   ../../arch/arm/mach-s5pv310/c1.h \
 
 arch/arm/mach-s5pv310/mach-c1.o: $(deps_arch/arm/mach-s5pv310/mach-c1.o)

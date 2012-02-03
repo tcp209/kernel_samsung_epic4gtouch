@@ -5,6 +5,8 @@ deps_drivers/media/video/samsung/mfc5x/mfc_dec.o := \
     $(wildcard include/config/cpu/freq.h) \
     $(wildcard include/config/arch/s5pv310.h) \
     $(wildcard include/config/arch/s5pv210.h) \
+    $(wildcard include/config/mach/p6/rev02.h) \
+    $(wildcard include/config/mach/p6/rev00.h) \
     $(wildcard include/config/video/mfc/vcm/ump.h) \
     $(wildcard include/config/s5p/vmem.h) \
   ../../arch/arm/include/asm/cacheflush.h \

@@ -546,7 +546,6 @@ deps_drivers/usb/gadget/f_mtp_samsung.o := \
   ../../include/trace/events/kmem.h \
   ../../include/linux/kmemleak.h \
     $(wildcard include/config/debug/kmemleak.h) \
-  ../../include/linux/usb/cdc.h \
   ../../include/linux/switch.h \
   ../../drivers/usb/gadget/f_mtp.h \
   ../../drivers/usb/gadget/gadget_chips.h \
@@ -574,90 +573,6 @@ deps_drivers/usb/gadget/f_mtp_samsung.o := \
     $(wildcard include/config/usb/s3c/hsotg.h) \
     $(wildcard include/config/usb/s3c/hsudc.h) \
     $(wildcard include/config/usb/gadget/s3c/otgd.h) \
-  ../../include/linux/usb/android_composite.h \
-  ../../include/linux/if_ether.h \
-  ../../include/linux/skbuff.h \
-    $(wildcard include/config/nf/conntrack.h) \
-    $(wildcard include/config/bridge/netfilter.h) \
-    $(wildcard include/config/xfrm.h) \
-    $(wildcard include/config/net/sched.h) \
-    $(wildcard include/config/net/cls/act.h) \
-    $(wildcard include/config/ipv6/ndisc/nodetype.h) \
-    $(wildcard include/config/net/dma.h) \
-    $(wildcard include/config/network/secmark.h) \
-  ../../include/linux/kmemcheck.h \
-  ../../include/linux/net.h \
-  ../../include/linux/socket.h \
-  ../../arch/arm/include/asm/socket.h \
-  ../../arch/arm/include/asm/sockios.h \
-  ../../include/linux/sockios.h \
-  ../../include/linux/random.h \
-  ../../include/linux/ratelimit.h \
-  ../../include/linux/textsearch.h \
-  ../../include/net/checksum.h \
-  ../../arch/arm/include/asm/checksum.h \
-  ../../include/linux/in6.h \
-  ../../include/linux/dmaengine.h \
-    $(wildcard include/config/async/tx/disable/channel/switch.h) \
-    $(wildcard include/config/dma/engine.h) \
-    $(wildcard include/config/async/tx/dma.h) \
-  ../../include/linux/dma-mapping.h \
-    $(wildcard include/config/has/dma.h) \
-    $(wildcard include/config/have/dma/attrs.h) \
-    $(wildcard include/config/need/dma/map/state.h) \
-  ../../include/linux/dma-attrs.h \
-  ../../include/linux/bug.h \
-  ../../include/linux/scatterlist.h \
-    $(wildcard include/config/debug/sg.h) \
-  ../../arch/arm/include/asm/scatterlist.h \
-  ../../include/asm-generic/scatterlist.h \
-    $(wildcard include/config/need/sg/dma/length.h) \
-  ../../include/linux/mm.h \
-    $(wildcard include/config/ksm.h) \
-    $(wildcard include/config/debug/pagealloc.h) \
-    $(wildcard include/config/hibernation.h) \
-  ../../include/linux/debug_locks.h \
-    $(wildcard include/config/debug/locking/api/selftests.h) \
-  ../../include/linux/range.h \
-  ../../arch/arm/include/asm/pgtable.h \
-    $(wildcard include/config/highpte.h) \
-  ../../include/asm-generic/4level-fixup.h \
-  ../../arch/arm/include/asm/proc-fns.h \
-    $(wildcard include/config/cpu/arm7tdmi.h) \
-    $(wildcard include/config/cpu/arm720t.h) \
-    $(wildcard include/config/cpu/arm740t.h) \
-    $(wildcard include/config/cpu/arm9tdmi.h) \
-    $(wildcard include/config/cpu/arm920t.h) \
-    $(wildcard include/config/cpu/arm922t.h) \
-    $(wildcard include/config/cpu/arm925t.h) \
-    $(wildcard include/config/cpu/arm926t.h) \
-    $(wildcard include/config/cpu/arm940t.h) \
-    $(wildcard include/config/cpu/arm946e.h) \
-    $(wildcard include/config/cpu/arm1020.h) \
-    $(wildcard include/config/cpu/arm1020e.h) \
-    $(wildcard include/config/cpu/arm1022.h) \
-    $(wildcard include/config/cpu/arm1026.h) \
-    $(wildcard include/config/cpu/mohawk.h) \
-    $(wildcard include/config/cpu/feroceon.h) \
-    $(wildcard include/config/cpu/v6.h) \
-    $(wildcard include/config/cpu/v7.h) \
-  ../../arch/arm/include/asm/cpu-single.h \
-  ../../arch/arm/mach-s5pv310/include/mach/vmalloc.h \
-  ../../arch/arm/include/asm/pgtable-hwdef.h \
-  ../../include/asm-generic/pgtable.h \
-  ../../include/linux/page-flags.h \
-    $(wildcard include/config/pageflags/extended.h) \
-    $(wildcard include/config/arch/uses/pg/uncached.h) \
-    $(wildcard include/config/memory/failure.h) \
-    $(wildcard include/config/swap.h) \
-    $(wildcard include/config/s390.h) \
-  ../../include/linux/vmstat.h \
-    $(wildcard include/config/vm/event/counters.h) \
-  ../../arch/arm/include/asm/io.h \
-  ../../arch/arm/mach-s5pv310/include/mach/io.h \
-  ../../arch/arm/include/asm/dma-mapping.h \
-  ../../include/asm-generic/dma-coherent.h \
-    $(wildcard include/config/have/generic/dma/coherent.h) \
 
 drivers/usb/gadget/f_mtp_samsung.o: $(deps_drivers/usb/gadget/f_mtp_samsung.o)
 

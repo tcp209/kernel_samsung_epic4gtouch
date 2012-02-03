@@ -596,6 +596,7 @@ deps_drivers/scsi/scsi_lib_dma.o := \
     $(wildcard include/config/have/generic/dma/coherent.h) \
   ../../include/scsi/scsi_device.h \
   ../../include/scsi/scsi_host.h \
+    $(wildcard include/config/usb/host/notify.h) \
 
 drivers/scsi/scsi_lib_dma.o: $(deps_drivers/scsi/scsi_lib_dma.o)
 

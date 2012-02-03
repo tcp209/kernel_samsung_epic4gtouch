@@ -4,7 +4,11 @@ deps_drivers/power/sec_battery.o := \
   ../../drivers/power/sec_battery.c \
     $(wildcard include/config/target/locale/na.h) \
     $(wildcard include/config/target/locale/naatt.h) \
+    $(wildcard include/config/mach/q1/rev02.h) \
     $(wildcard include/config/mach/c1/na/spr/epic2/rev00.h) \
+    $(wildcard include/config/mach/q1/chn.h) \
+    $(wildcard include/config/smb136/charger.h) \
+    $(wildcard include/config/smb328/charger.h) \
   ../../include/linux/kernel.h \
     $(wildcard include/config/lbdaf.h) \
     $(wildcard include/config/preempt/voluntary.h) \

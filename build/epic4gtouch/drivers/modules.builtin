@@ -13,7 +13,7 @@ kernel/drivers/cpufreq/freq_table.ko
 kernel/drivers/dpram/raffaello/dpram.ko
 kernel/drivers/dpram/raffaello/dpram_recovery.ko
 kernel/drivers/hid/hid.ko
-kernel/drivers/hid/hid-apple.ko
+kernel/drivers/hid/hid-samsung.ko
 kernel/drivers/hid/usbhid/usbhid.ko
 kernel/drivers/i2c/i2c-core.ko
 kernel/drivers/i2c/i2c-dev.ko
@@ -72,7 +72,7 @@ kernel/drivers/media/video/v4l2-int-device.ko
 kernel/drivers/media/video/v4l2-common.ko
 kernel/drivers/media/video/v4l1-compat.ko
 kernel/drivers/media/video/m5mo.ko
-kernel/drivers/media/video/s5k5bbgx.ko
+kernel/drivers/media/video/s5k5bafx.ko
 kernel/drivers/mfd/mfd-core.ko
 kernel/drivers/misc/ak8975.ko
 kernel/drivers/misc/k3dh.ko
@@ -86,7 +86,6 @@ kernel/drivers/mmc/host/sdhci.ko
 kernel/drivers/mmc/host/sdhci-s3c.ko
 kernel/drivers/mmc/host/mshci.ko
 kernel/drivers/mmc/host/mshci-s3c.ko
-kernel/drivers/net/mii.ko
 kernel/drivers/net/ppp_generic.ko
 kernel/drivers/net/ppp_async.ko
 kernel/drivers/net/ppp_synctty.ko
@@ -101,10 +100,7 @@ kernel/drivers/net/pppox.ko
 kernel/drivers/net/pppopns.ko
 kernel/drivers/net/slhc.ko
 kernel/drivers/net/tun.ko
-kernel/drivers/net/usb/usbnet.ko
-kernel/drivers/net/usb/cdc-svnet.ko
-kernel/drivers/net/usb/sipc4.ko
-kernel/drivers/net/usb/pdp.ko
+kernel/drivers/net/wireless/bcmdhd/bcmdhd.ko
 kernel/drivers/power/power_supply.ko
 kernel/drivers/power/sec_battery.ko
 kernel/drivers/power/max17042-fuelgauge.ko
@@ -130,6 +126,8 @@ kernel/drivers/staging/android/logger.ko
 kernel/drivers/staging/android/timed_gpio.ko
 kernel/drivers/staging/westbridge/astoria/device/cyasdev.ko
 kernel/drivers/switch/switch_class.ko
+kernel/drivers/thermal/thermal_sys.ko
+kernel/drivers/usb/class/usblp.ko
 kernel/drivers/usb/core/usbcore.ko
 kernel/drivers/usb/host/ehci-hcd.ko
 kernel/drivers/usb/host/s3c-otg/s3c_otg_hcd.ko

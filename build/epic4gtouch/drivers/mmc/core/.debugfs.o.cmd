@@ -522,16 +522,6 @@ deps_drivers/mmc/core/debugfs.o := \
   ../../arch/arm/include/asm/device.h \
     $(wildcard include/config/dmabounce.h) \
   ../../include/linux/pm_wakeup.h \
-  ../../include/linux/mmc/discard.h \
-    $(wildcard include/config/mmc/discard/debug.h) \
-  ../../include/linux/proc_fs.h \
-    $(wildcard include/config/proc/devicetree.h) \
-    $(wildcard include/config/proc/kcore.h) \
-  ../../include/linux/magic.h \
-  ../../include/linux/uaccess.h \
-  ../../arch/arm/include/asm/uaccess.h \
-  ../../arch/arm/include/asm/unified.h \
-    $(wildcard include/config/arm/asm/unified.h) \
   ../../include/linux/mmc/host.h \
     $(wildcard include/config/mmc/debug.h) \
     $(wildcard include/config/leds/triggers.h) \

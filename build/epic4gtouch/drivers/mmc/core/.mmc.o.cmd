@@ -493,49 +493,6 @@ deps_drivers/mmc/core/mmc.o := \
   ../../include/linux/mmc/pm.h \
   ../../include/linux/mmc/card.h \
     $(wildcard include/config/mmc/discard/merge.h) \
-  ../../include/linux/mmc/discard.h \
-    $(wildcard include/config/mmc/discard/debug.h) \
-  ../../include/linux/proc_fs.h \
-    $(wildcard include/config/proc/devicetree.h) \
-    $(wildcard include/config/proc/kcore.h) \
-  ../../include/linux/fs.h \
-    $(wildcard include/config/dnotify.h) \
-    $(wildcard include/config/quota.h) \
-    $(wildcard include/config/fsnotify.h) \
-    $(wildcard include/config/inotify.h) \
-    $(wildcard include/config/fs/posix/acl.h) \
-    $(wildcard include/config/debug/writecount.h) \
-    $(wildcard include/config/file/locking.h) \
-    $(wildcard include/config/block.h) \
-    $(wildcard include/config/fs/xip.h) \
-    $(wildcard include/config/migration.h) \
-  ../../include/linux/limits.h \
-  ../../include/linux/ioctl.h \
-  ../../arch/arm/include/asm/ioctl.h \
-  ../../include/asm-generic/ioctl.h \
-  ../../include/linux/kdev_t.h \
-  ../../include/linux/dcache.h \
-  ../../include/linux/radix-tree.h \
-  ../../include/linux/semaphore.h \
-  ../../include/linux/fiemap.h \
-  ../../include/linux/quota.h \
-    $(wildcard include/config/quota/netlink/interface.h) \
-  ../../include/linux/dqblk_xfs.h \
-  ../../include/linux/dqblk_v1.h \
-  ../../include/linux/dqblk_v2.h \
-  ../../include/linux/dqblk_qtree.h \
-  ../../include/linux/nfs_fs_i.h \
-  ../../include/linux/nfs.h \
-  ../../include/linux/sunrpc/msg_prot.h \
-  ../../include/linux/inet.h \
-  ../../include/linux/fcntl.h \
-  ../../arch/arm/include/asm/fcntl.h \
-  ../../include/asm-generic/fcntl.h \
-  ../../include/linux/magic.h \
-  ../../include/linux/uaccess.h \
-  ../../arch/arm/include/asm/uaccess.h \
-  ../../arch/arm/include/asm/unified.h \
-    $(wildcard include/config/arm/asm/unified.h) \
   ../../include/linux/mmc/mmc.h \
   ../../drivers/mmc/core/core.h \
   ../../include/linux/delay.h \

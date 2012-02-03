@@ -682,6 +682,8 @@ deps_net/ipv4/devinet.o := \
   ../../include/linux/unaligned/generic.h \
   ../../include/linux/inetdevice.h \
   ../../include/linux/igmp.h \
+  ../../include/linux/iface_stat.h \
+    $(wildcard include/config/iface/stat.h) \
   ../../include/net/arp.h \
   ../../include/linux/if_arp.h \
   ../../include/net/neighbour.h \

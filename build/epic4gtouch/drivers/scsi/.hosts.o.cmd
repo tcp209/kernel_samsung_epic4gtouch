@@ -605,6 +605,7 @@ deps_drivers/scsi/hosts.o := \
   ../../include/scsi/scsi_device.h \
   ../../include/scsi/scsi.h \
   ../../include/scsi/scsi_host.h \
+    $(wildcard include/config/usb/host/notify.h) \
   ../../include/scsi/scsi_transport.h \
   ../../drivers/scsi/scsi_priv.h \
     $(wildcard include/config/scsi/logging.h) \

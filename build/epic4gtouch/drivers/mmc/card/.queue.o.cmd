@@ -611,12 +611,6 @@ deps_drivers/mmc/card/queue.o := \
     $(wildcard include/config/generic/irq/probe.h) \
   ../../include/linux/irqreturn.h \
   ../../include/linux/irqnr.h \
-  ../../include/linux/mmc/discard.h \
-    $(wildcard include/config/mmc/discard/debug.h) \
-  ../../include/linux/proc_fs.h \
-    $(wildcard include/config/proc/devicetree.h) \
-    $(wildcard include/config/proc/kcore.h) \
-  ../../include/linux/magic.h \
   ../../include/linux/mmc/host.h \
     $(wildcard include/config/mmc/debug.h) \
     $(wildcard include/config/leds/triggers.h) \
